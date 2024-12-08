@@ -1,5 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { JSDOM } from 'jsdom';
 import DOMPurify from 'dompurify';
+
+const window = (new JSDOM('')).window;
+const purify = DOMPurify(window);
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === 'POST') {
@@ -14,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             return res.status(400).json({ error: 'Geçersiz e-posta veya mesaj.' });
         }
 
-        const sanitizedMessage = DOMPurify.sanitize(message);
+        const sanitizedMessage = purify.sanitize(message);
 
         const data = {
             service_id: process.env.EMAILJS_SERVICE_ID,
