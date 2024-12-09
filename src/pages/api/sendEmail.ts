@@ -40,8 +40,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 body: JSON.stringify(data),
             });
 
+            const responseData = await response.json();
+            console.log('send response : ', responseData);
+
             if (!response.ok) {
-                return res.status(500).json({ error: 'Mesaj gönderilemedi. Lütfen tekrar deneyin.', response: response });
+                return res.status(500).json({ error: 'Mesaj gönderilemedi. Lütfen tekrar deneyin.', response: responseData });
             }
 
             return res.status(200).json({ success: true, message: 'Mesajınız başarıyla gönderildi!' });
