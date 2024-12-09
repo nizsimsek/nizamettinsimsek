@@ -38,7 +38,8 @@ export default function Contact() {
         }
       );
 
-      console.log(response);
+      const responseData = await response.json();
+      console.log("send responseee : ", responseData);
 
       if (!response.ok) {
         const responseBody = await response.text();

@@ -40,7 +40,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 body: JSON.stringify(data),
             });
 
-            const responseData = await response.json();
+            const responseData = await response.text();
             console.log('send response : ', responseData);
 
             if (!response.ok) {
