@@ -25,36 +25,28 @@ export const links: Link[] = [
 
 export const projectsData: ProjectInfo[] = [
     {
-        title: "Snowlake Theme",
+        title: "Live 2P2",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        tags: ["React", "Next.js", "MongoDB", "Tailwind", "NodeJS"],
-        imageUrl: "/image1.png",
-        link: "https://www.google.com",
+            "Live is P2P Private Video Call Application. You are create a room and share room link your friend. You can make a private video call with your friend. It is built with ReactJS, SocketIO, WebRTC and TailwindCSS",
+        tags: ["React", "SocketIO", "WebRTC", "Tailwind"],
+        imageUrl: "/Live.png",
+        link: "https://livep2p.nizamettinsimsek.com.tr/",
     },
     {
-        title: "Budget App",
+        title: "NFT King",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        tags: ["React", "Next.js", "MongoDB", "Tailwind", "NodeJS"],
-        imageUrl: "/image2.png",
-        link: "https://www.google.com",
+            "NFT King is a landing page for NFT Marketplace. It is a fully responsive website that is built with React, Next.js, Tailwind CSS, NextUI and deployed on my web server.",
+        tags: ["React", "Next.js", "Tailwind", "NextUI"],
+        imageUrl: "/NFTKing.png",
+        link: "https://nft-hero.nizamettinsimsek.com.tr/",
     },
     {
-        title: "Storage App",
+        title: "Rise Finance",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        tags: ["React", "Next.js", "MongoDB", "Tailwind", "NodeJS"],
-        imageUrl: "/image3.png",
-        link: "https://www.google.com",
-    },
-    {
-        title: "Missio Theme",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        tags: ["React", "Next.js", "MongoDB", "Tailwind", "NodeJS"],
-        imageUrl: "/image4.png",
-        link: "https://www.google.com",
+            "Rise Finance is a landing page for Rise Financial Technology Company. It is a fully responsive website that is built with React, Next.js, Tailwind CSS and deployed on my web server.",
+        tags: ["React", "Next.js", "Tailwind"],
+        imageUrl: "/RiseFinance.png",
+        link: "https://fintech.nizamettinsimsek.com.tr/",
     },
 ];
 
