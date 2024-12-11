@@ -20,7 +20,7 @@ export default function Header({ links }: HeaderProps) {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
-        <ul className="flex flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-400">
+        <ul className="flex flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium">
           {links.map((link) => (
             <motion.li
               className="flex items-center justify-center relative"
@@ -31,9 +31,9 @@ export default function Header({ links }: HeaderProps) {
               <NextLink
                 aria-label={link.title}
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-50",
+                  "flex w-full items-center justify-center px-3 py-3 text-gray-600 hover:text-black transition dark:text-gray-400 dark:hover:text-gray-50",
                   {
-                    "text-gray-950 dark:text-gray-200":
+                    "text-black dark:text-gray-200":
                       activeSection === link.hash,
                   }
                 )}
