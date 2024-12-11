@@ -36,12 +36,13 @@ export default function Intro() {
           >
             <Image
               src="/work.png"
-              width="480"
-              height="480"
+              width="240"
+              height="240"
               alt="portrait"
-              quality="100"
-              priority={true}
-              className="rounded-full object-cover shadow-xl"
+              quality="75"
+              loading="lazy"
+              sizes="(max-width: 288px) 100vw, 480px"
+              className="rounded-full object-cover shadow-xl w-full"
             />
           </motion.div>
         </div>
@@ -81,33 +82,37 @@ export default function Intro() {
             setActiveSection("#contact");
             setTimeOfLastClick(Date.now());
           }}
+          aria-label="Connect with me"
         >
           Connect <Mail />
         </Link>
 
         <a
-          className="bg-gray-900 p-4 text-white flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="bg-gray-900 p-4 text-white flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/90"
           href="https://www.linkedin.com/in/nizsimsek/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="LinkedIn Profile"
         >
           <FaLinkedin />
         </a>
 
         <a
-          className="bg-gray-900 p-4 text-white flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="bg-gray-900 p-4 text-white flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/90"
           href="https://www.github.com/nizsimsek/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="GitHub Profile"
         >
           <FaGithub />
         </a>
 
         <a
-          className="bg-gray-900 p-4 text-white flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="bg-gray-900 p-4 text-white flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/90"
           href="/nizamettinsimsekcv.pdf"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Download Resume"
         >
           <BsFiletypePdf />
         </a>

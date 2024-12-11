@@ -41,14 +41,14 @@ export default function Project({
             <FaExternalLinkAlt className="hidden group-hover:block text-lg" />
             {title}
           </h3>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+          <p className="mt-2 leading-relaxed text-gray-900 dark:text-white/90">
             {description}
           </p>
           <ul className="flex flex-wrap !mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
                 key={index}
-                className="bg-black/70 px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
+                className="bg-black/90 px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/90"
               >
                 {tag}
               </li>

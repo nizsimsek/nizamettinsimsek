@@ -70,7 +70,7 @@ export default function Contact() {
     >
       <SectionHeading>Contact Me</SectionHeading>
 
-      <p className="text-gray-700 -mt-6 dark:text-white/80">
+      <p className="text-gray-900 -mt-6 dark:text-white/90">
         Feel free to reach out if you have any questions, project inquiries, or
         just want to connect. I’m always happy to help and discuss new
         opportunities!

@@ -27,7 +27,7 @@ export default function Switch({
       <AnimatePresence>
         {isHovered && (
           <motion.button
-            key="languageSwitcher"
+            aria-label="Switch Theme Hidden"
             initial="hidden"
             animate="visible"
             exit="hidden"
@@ -41,6 +41,7 @@ export default function Switch({
       </AnimatePresence>
 
       <motion.button
+        aria-label="Switch Theme Active"
         className="bg-white w-[3rem] h-[3rem] drop-shadow backdrop-blur-[0.5rem] border border-slate-400 dark:border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center dark:bg-gray-950"
         variants={switchVariants}
         initial="visible"

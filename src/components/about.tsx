@@ -51,7 +51,7 @@ export default function About() {
                   damping={1e-1}
                   triggerOnce={true}
                 >
-                  <p className="mt-2 leading-relaxed text-sm text-gray-700 dark:text-white/70">
+                  <p className="mt-2 leading-relaxed text-sm text-gray-900 dark:text-white/90">
                     I’m Nizamettin Şimşek, a passionate full-stack developer
                     focused on building modern web and mobile solutions. My
                     mission is to deliver innovative and efficient digital
@@ -76,7 +76,7 @@ export default function About() {
                   damping={1e-1}
                   triggerOnce={true}
                 >
-                  <p className="mt-2 leading-relaxed text-sm text-gray-700 dark:text-white/70">
+                  <p className="mt-2 leading-relaxed text-sm text-gray-900 dark:text-white/90">
                     My vision is to empower businesses by creating scalable and
                     user-friendly digital products. Whether it's crafting
                     responsive designs or optimizing user experience, I focus on
@@ -95,12 +95,13 @@ export default function About() {
               triggerOnce={true}
             >
               <Image
-                src="/about.png"
+                src="/about.webp"
                 width="600"
                 height="600"
                 alt="portrait"
-                quality="100"
-                priority={true}
+                quality="75"
+                loading="lazy"
+                sizes="(max-width: 600px) 100vw, 600px"
                 className="rounded-full mt-8 object-cover"
               />
             </Fade>
