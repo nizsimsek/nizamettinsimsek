@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { ExperienceInfo } from "@/lib/types";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { useLanguage } from "@/containers/language-context";
 
@@ -28,7 +28,26 @@ export default function Experience({
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-  const xProgress = useTransform(scrollYProgress, [0, 1], [isOdd ? -250 : 250, 0]);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const xProgress = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [isMobile ? (isOdd ? -25 : 25) : isOdd ? -250 : 250, 0]
+  );
 
   const openWebsiteNewPage = (url: string) => {
     window.open(url, "_blank");

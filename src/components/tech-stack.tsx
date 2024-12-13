@@ -1,12 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import SectionHeading from "./section-heading";
 import { techStackData } from "@/lib/data";
 import { useSectionInView } from "@/lib/useInView";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/containers/language-context";
-import Image from "next/image";
 import {
   SiJavascript,
   SiTypescript,
@@ -20,23 +19,62 @@ import {
   SiSocketdotio,
   SiWebrtc,
   SiMysql,
-  SiPostgresql,
 } from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
 
-const icons: { [key: string]: JSX.Element } = {
-  SiJavascript: <SiJavascript />,
-  SiTypescript: <SiTypescript />,
-  SiReact: <SiReact />,
-  SiTailwindcss: <SiTailwindcss />,
-  SiBootstrap: <SiBootstrap />,
-  SiRedux: <SiRedux />,
-  SiFramer: <SiFramer />,
-  SiNextdotjs: <SiNextdotjs />,
-  SiGit: <SiGit />,
-  SiSocketdotio: <SiSocketdotio />,
-  SiWebrtc: <SiWebrtc />,
-  SiMysql: <SiMysql />,
-  SiPostgresql: <SiPostgresql />,
+const icons: { [key: string]: { component: JSX.Element; color: string } } = {
+  SiJavascript: {
+    component: <SiJavascript />,
+    color: "#F7DF1E",
+  },
+  SiTypescript: {
+    component: <SiTypescript />,
+    color: "#3178C6",
+  },
+  SiReact: {
+    component: <SiReact />,
+    color: "#61DAFB",
+  },
+  SiTailwindcss: {
+    component: <SiTailwindcss />,
+    color: "#06B6D4",
+  },
+  SiBootstrap: {
+    component: <SiBootstrap />,
+    color: "#7952B3",
+  },
+  SiRedux: {
+    component: <SiRedux />,
+    color: "#764ABC",
+  },
+  SiFramer: {
+    component: <SiFramer />,
+    color: "#E22AC1",
+  },
+  SiNextdotjs: {
+    component: <SiNextdotjs />,
+    color: "#000",
+  },
+  SiGit: {
+    component: <SiGit />,
+    color: "#F05032",
+  },
+  SiSocketdotio: {
+    component: <SiSocketdotio />,
+    color: "#000",
+  },
+  SiWebrtc: {
+    component: <SiWebrtc />,
+    color: "#009938",
+  },
+  SiMysql: {
+    component: <SiMysql />,
+    color: "#3D6E93",
+  },
+  BiLogoPostgresql: {
+    component: <BiLogoPostgresql />,
+    color: "#336790",
+  },
 };
 
 const fadeInAnimationVariants = {
@@ -67,22 +105,31 @@ export default function TechStack() {
         {language === "tr" ? "Teknolojiler" : "Tech Stack"}
       </SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {techStackData.map((tech, index) => (
-          <motion.li
-            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80 flex items-center justify-center gap-2"
-            key={index}
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-            custom={index}
-          >
-            {icons[tech.logo]}
-            {tech.title}
-          </motion.li>
-        ))}
+        {techStackData.map((tech, index) => {
+          const [isHovered, setIsHovered] = useState(false);
+          return (
+            <motion.li
+              className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80 flex items-center justify-center gap-2 hover:cursor-pointer"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              style={{
+                color: isHovered ? icons[tech.logo].color : "",
+                scale: isHovered ? 1.05 : 1,
+              }}
+              key={index}
+              variants={fadeInAnimationVariants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              custom={index}
+            >
+              {icons[tech.logo].component}
+              {tech.title}
+            </motion.li>
+          );
+        })}
       </ul>
     </section>
   );
