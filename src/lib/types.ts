@@ -2,31 +2,50 @@ import { links } from "./data";
 
 export type SectionName = (typeof links)[number]["hash"];
 
+export type Home = {
+    titleEn: string;
+    titleTr: string;
+    descriptionEn: string;
+    descriptionTr: string;
+}
+
+export type About = {
+    missionEn: string;
+    missionTr: string;
+    visionEn: string;
+    visionTr: string;
+};
+
 export type ProjectInfo = {
     title: string;
-    description: string;
-    tags: string[];
+    descriptionEn: string;
+    descriptionTr: string;
+    techs: string[];
     imageUrl: string;
     link: string;
-};
+}
+
+export type TechStack = {
+    logo: string;
+    title: string;
+}
+
+export type ExperienceInfo = {
+    isOdd: boolean;
+    company: string;
+    companyUrl: string;
+    companyLogo: string;
+    durationEn: string;
+    durationTr: string;
+    titleEn: string;
+    titleTr: string;
+    descriptionEn: string;
+    descriptionTr: string;
+    techs: string[];
+}
 
 export type Link = {
-    title: string;
+    titleTr: string;
+    titleEn: string;
     hash: string;
-};
-
-
-
-type About = {
-    title: string;
-    im: string;
-    job: string;
-    description: string;
-    stacks: string;
-    otherStacks: string;
-    otherPassion: string;
-    conclusion: string;
-};
-export type Texts = {
-    about: About;
 };

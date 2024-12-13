@@ -7,10 +7,12 @@ import clsx from "clsx";
 import NextLink from "next/link";
 import { useActiveSectionContext } from "@/containers/active-section";
 import Hamburger from "hamburger-react";
+import { useLanguage } from "@/containers/language-context";
 
 type HamburgerMenuProps = { links: Link[] };
 
 const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ links }) => {
+  const { language } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -50,7 +52,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ links }) => {
             variants={menuList}
             initial="start"
             animate="visible"
-            className=" w-full bg-white drop-shadow  border border-slate-400 dark:border-white border-opacity-60 shadow-2xl rounded-2xl flex flex-col items-center justify-center dark:bg-gray-950 p-1"
+            className=" w-full bg-white drop-shadow border border-slate-400 dark:border-white border-opacity-60 shadow-2xl rounded-2xl flex flex-col items-center justify-center dark:bg-gray-950 p-1"
           >
             {links.map((link, index) => (
               <motion.div
@@ -60,7 +62,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ links }) => {
                 animate={{ y: 0, opacity: 1 }}
               >
                 <NextLink
-                  aria-label={link.title}
+                  aria-label={language === "tr" ? link.titleTr : link.titleEn}
                   className={clsx(
                     "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300 cursor-pointer",
                     {
@@ -76,7 +78,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ links }) => {
                     setTimeOfLastClick(Date.now());
                   }}
                 >
-                  {link.title}
+                  {link.titleEn}
                 </NextLink>
               </motion.div>
             ))}

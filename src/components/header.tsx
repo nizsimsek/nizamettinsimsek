@@ -6,10 +6,12 @@ import NextLink from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/containers/active-section";
 import { Link } from "@/lib/types";
+import { useLanguage } from "@/containers/language-context";
 
 type HeaderProps = { links: Link[] };
 
 export default function Header({ links }: HeaderProps) {
+  const { language } = useLanguage();
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
 
@@ -29,7 +31,7 @@ export default function Header({ links }: HeaderProps) {
               animate={{ y: 0, opacity: 1 }}
             >
               <NextLink
-                aria-label={link.title}
+                aria-label={language === "tr" ? link.titleTr : link.titleEn}
                 className={clsx(
                   "flex w-full items-center justify-center px-3 py-3 text-gray-600 hover:text-black transition dark:text-gray-400 dark:hover:text-gray-50",
                   {
@@ -43,7 +45,7 @@ export default function Header({ links }: HeaderProps) {
                   setTimeOfLastClick(Date.now());
                 }}
               >
-                {link.title}
+                {language === "tr" ? link.titleTr : link.titleEn}
                 {link.hash === activeSection && (
                   <motion.span
                     className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
