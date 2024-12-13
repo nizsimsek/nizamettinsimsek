@@ -6,8 +6,10 @@ import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/useInView";
 import SubmitBtn from "./submit-btn";
 import DOMPurify from "dompurify";
+import { useLanguage } from "@/containers/language-context";
 
 export default function Contact() {
+  const { language } = useLanguage();
   const { ref } = useSectionInView("#contact");
   const [senderEmail, setSenderEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -68,12 +70,14 @@ export default function Contact() {
         once: true,
       }}
     >
-      <SectionHeading>Contact Me</SectionHeading>
+      <SectionHeading>
+        {language === "tr" ? "İletişim" : "Contact Me"}
+      </SectionHeading>
 
       <p className="text-gray-900 -mt-6 dark:text-white/90">
-        Feel free to reach out if you have any questions, project inquiries, or
-        just want to connect. I’m always happy to help and discuss new
-        opportunities!
+        {language === "tr"
+          ? "Herhangi bir soru, projeleriniz veya sadece bağlantı kurmak istiyorsanız, benimle iletişime geçebilirsiniz. Her zaman yardıma ve yeni fırsatlar hakkında konuşmaktan mutluluk duyarım!"
+          : "Feel free to reach out if you have any questions, project inquiries, or just want to connect. I’m always happy to help and discuss new opportunities!"}
       </p>
 
       {error && <p className="text-red-500">{error}</p>}
@@ -89,20 +93,23 @@ export default function Contact() {
           type="email"
           required
           maxLength={500}
-          placeholder={"Your email"}
+          placeholder={language === "tr" ? "E-posta adresiniz" : "Your email"}
           value={senderEmail}
           onChange={(e) => setSenderEmail(e.target.value)}
         />
         <textarea
           className="h-52 my-3 rounded-lg resize-none borderBlack p-4 text-gray-700 dark:bg-white dark:text-white dark:bg-opacity-20 dark:focus:bg-opacity-10 transition-all dark:outline-none"
           name="message"
-          placeholder={"Your message"}
+          placeholder={language === "tr" ? "Mesajınız" : "Your message"}
           required
           maxLength={5000}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
-        <SubmitBtn text={"Submit"} disabled={pending} />
+        <SubmitBtn
+          text={language === "tr" ? "Gönder" : "Submit"}
+          disabled={pending}
+        />
       </form>
     </motion.section>
   );

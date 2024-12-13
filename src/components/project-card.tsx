@@ -3,16 +3,19 @@ import { ProjectInfo } from "@/lib/types";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { useLanguage } from "@/containers/language-context";
 
 type ProjectProps = ProjectInfo;
 
 export default function Project({
   title,
-  description,
-  tags,
+  descriptionEn,
+  descriptionTr,
+  techs,
   imageUrl,
   link,
 }: ProjectProps) {
+  const { language } = useLanguage();
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -32,7 +35,7 @@ export default function Project({
         scale: scaleProgress,
         opacity: opacityProgress,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0 hover:cursor-pointer"
+      className="group mb-6 sm:mb-8 last:mb-0 hover:cursor-pointer"
       onClick={() => openWebsiteNewPage(link)}
     >
       <section className="bg-white max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
@@ -42,15 +45,15 @@ export default function Project({
             {title}
           </h3>
           <p className="mt-2 leading-relaxed text-gray-900 dark:text-white/90">
-            {description}
+            {language === "tr" ? descriptionTr : descriptionEn}
           </p>
           <ul className="flex flex-wrap !mt-4 gap-2 sm:mt-auto">
-            {tags.map((tag, index) => (
+            {techs.map((tech, index) => (
               <li
                 key={index}
                 className="bg-black/90 px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/90"
               >
-                {tag}
+                {tech}
               </li>
             ))}
           </ul>

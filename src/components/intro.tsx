@@ -10,8 +10,11 @@ import { useSectionInView } from "@/lib/useInView";
 import { useActiveSectionContext } from "@/containers/active-section";
 import { Mail } from "lucide-react";
 import { BsFiletypePdf } from "react-icons/bs";
+import { useLanguage } from "@/containers/language-context";
+import { homeData } from "@/lib/data";
 
 export default function Intro() {
+  const { language } = useLanguage();
   const { ref } = useSectionInView("#home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
@@ -19,7 +22,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[75rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="max-w-[75rem] text-center mb-32 sm:mb-40 scroll-mt-[100rem]"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -57,12 +60,10 @@ export default function Intro() {
       >
         <h1 className="mb-10 mt-4 px-4 text-2xl sm:text-4xl">
           <span className="font-medium !leading-[1.5] ">
-            Hi, I'm Nizamettin Şimşek
+            {language === "tr" ? homeData.titleTr : homeData.titleEn}
           </span>
           <p className="text-lg max-w-3xl">
-            A passionate fullstack developer with experience in building
-            scalable web applications using modern technologies. I enjoy solving
-            complex problems and creating user-friendly interfaces.
+            {language === "tr" ? homeData.descriptionTr : homeData.descriptionEn}
           </p>
         </h1>
       </Fade>
@@ -82,9 +83,9 @@ export default function Intro() {
             setActiveSection("#contact");
             setTimeOfLastClick(Date.now());
           }}
-          aria-label="Connect with me"
+          aria-label={language === "tr" ? "İletişim" : "Contact"}
         >
-          Connect <Mail />
+          {language === "tr" ? "İletişim" : "Contact"} <Mail />
         </Link>
 
         <a
@@ -92,7 +93,7 @@ export default function Intro() {
           href="https://www.linkedin.com/in/nizsimsek/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="LinkedIn Profile"
+          aria-label={language === "tr" ? "LinkedIn Profilimi Görüntüle" : "View My LinkedIn Profile"}
         >
           <FaLinkedin />
         </a>
@@ -102,7 +103,7 @@ export default function Intro() {
           href="https://www.github.com/nizsimsek/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="GitHub Profile"
+          aria-label={language === "tr" ? "GitHub Profilimi Görüntüle" : "View My GitHub Profile"}
         >
           <FaGithub />
         </a>
@@ -112,7 +113,7 @@ export default function Intro() {
           href="/nizamettinsimsekcv.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Download Resume"
+          aria-label={language === "tr" ? "CV'yi İndir" : "Download Resume"}
         >
           <BsFiletypePdf />
         </a>

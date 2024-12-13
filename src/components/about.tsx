@@ -6,13 +6,16 @@ import { motion } from "framer-motion";
 import SectionHeading from "./section-heading";
 import { Fade } from "react-awesome-reveal";
 import { useSectionInView } from "@/lib/useInView";
+import { useLanguage } from "@/containers/language-context";
+import { aboutData } from "@/lib/data";
 
 export default function About() {
+  const { language } = useLanguage();
   const { ref } = useSectionInView("#about");
 
   return (
     <motion.section
-      className="max-w-[45rem] text-center mt-32 leading-8 mb-28 sm:mb-40 scroll-mt-28"
+      className="max-w-[45rem] text-center leading-8 mb-28 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -27,13 +30,13 @@ export default function About() {
           damping={1e-1}
           triggerOnce={true}
         >
-          <SectionHeading>About Me</SectionHeading>
+          <SectionHeading>
+            {language === "tr" ? "Hakkımda" : "About Me"}
+          </SectionHeading>
         </Fade>
-
         <div className="grid xl:grid-cols-2 lg:text-start">
           <div className="flex-1">
-            {/* Content */}
-            <div className="text-lg mt-12 xl:mt-3">
+            <div className="text-lg mt-3">
               <div className="flex justify-start flex-col">
                 <Fade
                   direction="up"
@@ -42,7 +45,9 @@ export default function About() {
                   damping={1e-1}
                   triggerOnce={true}
                 >
-                  <h3 className="font-bold mt-6">My Mission</h3>
+                  <h3 className="font-bold mt-6">
+                    {language === "tr" ? "Misyonum" : "My Mission"}
+                  </h3>
                 </Fade>
                 <Fade
                   direction="up"
@@ -52,12 +57,9 @@ export default function About() {
                   triggerOnce={true}
                 >
                   <p className="mt-2 leading-relaxed text-sm text-gray-900 dark:text-white/90">
-                    I’m Nizamettin Şimşek, a passionate full-stack developer
-                    focused on building modern web and mobile solutions. My
-                    mission is to deliver innovative and efficient digital
-                    experiences using technologies like Laravel, React, React
-                    Native, ExpressJS, WebSocket, TailwindCSS, and MySQL,
-                    helping businesses achieve their goals.
+                    {language === "tr"
+                      ? aboutData.missionTr
+                      : aboutData.missionEn}
                   </p>
                 </Fade>
                 <Fade
@@ -67,7 +69,9 @@ export default function About() {
                   damping={1e-1}
                   triggerOnce={true}
                 >
-                  <h3 className="font-bold mt-6">My Vision</h3>
+                  <h3 className="font-bold mt-6">
+                    {language === "tr" ? "Vizyonum" : "My Vision"}
+                  </h3>
                 </Fade>
                 <Fade
                   direction="up"
@@ -77,10 +81,9 @@ export default function About() {
                   triggerOnce={true}
                 >
                   <p className="mt-2 leading-relaxed text-sm text-gray-900 dark:text-white/90">
-                    My vision is to empower businesses by creating scalable and
-                    user-friendly digital products. Whether it's crafting
-                    responsive designs or optimizing user experience, I focus on
-                    every detail to ensure your success in the digital world.
+                    {language === "tr"
+                      ? aboutData.visionTr
+                      : aboutData.visionEn}
                   </p>
                 </Fade>
               </div>
@@ -95,7 +98,7 @@ export default function About() {
               triggerOnce={true}
             >
               <Image
-                src="/about.webp"
+                src="/about.png"
                 width="600"
                 height="600"
                 alt="portrait"
