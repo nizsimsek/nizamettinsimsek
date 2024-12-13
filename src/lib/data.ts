@@ -134,7 +134,7 @@ export const techStackData: TechStack[] = [
         title: "MySQL",
     },
     {
-        logo: "SiPostgresql",
+        logo: "BiLogoPostgresql",
         title: "PostgreSQL",
     },
 ];
