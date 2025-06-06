@@ -56,7 +56,7 @@ export const projectsData: ProjectInfo[] = [
         descriptionTr:
             "Live, P2P özel video arama uygulamasıdır. Arkadaşınızla özel bir video arama yapabilirsiniz. ReactJS, SocketIO, WebRTC ve TailwindCSS ile oluşturulmuştur.",
         imageUrl: "/Live.png",
-        link: "https://livep2p.nizsimsek.dev/",
+        link: "https://live-p2p.nizsimsek.dev/",
     },
     {
         title: "NFT King",
@@ -76,7 +76,7 @@ export const projectsData: ProjectInfo[] = [
             "Rise Finance, Rise Finans Teknolojisi Şirketi için bir landing page'dir. Tam olarak yanıt veren bir web sitesidir. React, Next.js, Tailwind CSS ve web sunucusunda dağıtılmıştır.",
         techs: ["React", "Next.js", "Tailwind"],
         imageUrl: "/RiseFinance.png",
-        link: "https://fintech.nizsimsek.dev/",
+        link: "https://rise.nizsimsek.dev/",
     },
 ];
 
