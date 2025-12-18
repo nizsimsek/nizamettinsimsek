@@ -2,7 +2,6 @@
   "name": "nizamettinsimsek",
   "version": "0.1.0",
   "private": true,
-  "type": "commonjs",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,6 +12,7 @@
     "@emailjs/browser": "^4.4.1",
     "@react-email/components": "^1.0.2",
     "@react-email/tailwind": "^2.0.2",
+    "@tailwindcss/postcss": "^4.1.18",
     "autoprefixer": "^10.4.23",
     "clsx": "^2.1.1",
     "dompurify": "^3.3.1",

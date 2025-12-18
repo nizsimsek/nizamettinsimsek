@@ -25,7 +25,7 @@ import {
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 
-const icons: { [key: string]: { component: JSX.Element; color: string } } = {
+const icons: { [key: string]: { component: React.JSX.Element; color: string } } = {
   SiJavascript: {
     component: <SiJavascript />,
     color: "#F7DF1E",

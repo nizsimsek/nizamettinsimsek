@@ -210,7 +210,7 @@ export const experiencesData: ExperienceInfo[] = [
     titleTr: "Full-Stack Developer",
     company: "KCTEK",
     companyUrl: "https://www.qulak.com/",
-    companyLogo: "/qulak.jpeg",
+    companyLogo: "/qulak-logo.png",
     durationEn: "Jan 2022 - Present",
     durationTr: "Ocak 2022 - Halen",
     descriptionEn:
