@@ -14,11 +14,14 @@ import {
   SiBootstrap,
   SiRedux,
   SiFramer,
+  SiGraphql,
   SiNextdotjs,
   SiGit,
   SiSocketdotio,
   SiWebrtc,
   SiMysql,
+  SiReactquery,
+  SiDocker,
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 
@@ -49,7 +52,15 @@ const icons: { [key: string]: { component: JSX.Element; color: string } } = {
   },
   SiFramer: {
     component: <SiFramer />,
-    color: "#E22AC1",
+    color: "#000",
+  },
+  SiReactQuery: {
+    component: <SiReactquery />,
+    color: "#FD611D",
+  },
+  SiGraphql: {
+    component: <SiGraphql />,
+    color: "#E10098",
   },
   SiNextdotjs: {
     component: <SiNextdotjs />,
@@ -74,6 +85,10 @@ const icons: { [key: string]: { component: JSX.Element; color: string } } = {
   BiLogoPostgresql: {
     component: <BiLogoPostgresql />,
     color: "#336790",
+  },
+  SiDocker: {
+    component: <SiDocker />,
+    color: "#2460FF",
   },
 };
 

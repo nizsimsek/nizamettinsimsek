@@ -64,7 +64,7 @@ export default function Project({
           quality={95}
           width={400}
           height={100}
-          className="absolute hidden sm:block top-8 -right-28 rounded-t-lg transition group-hover:scale-110 group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-3 group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-3 group-even:right-[initial] group-even:-left-32"
+          className="absolute hidden sm:block top-8 -right-28 rounded-t-lg transition group-hover:scale-110 group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-3 group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-3 group-even:right-[initial] group-even:-left-20"
         />
       </section>
     </motion.div>
