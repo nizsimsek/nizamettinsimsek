@@ -88,7 +88,7 @@ export default function Contact() {
         onSubmit={handleSubmit}
       >
         <input
-          className="h-14 px-4 rounded-lg borderBlack text-gray-700 dark:bg-white dark:text-white dark:bg-opacity-20 dark:focus:bg-opacity-10 transition-all dark:outline-none"
+          className="h-14 px-4 rounded-lg border border-black/10 dark:border-white/10 bg-white text-gray-700 dark:bg-white/20 dark:text-white dark:focus:bg-white/10 transition-all dark:outline-none"
           name="senderEmail"
           type="email"
           required
@@ -98,7 +98,7 @@ export default function Contact() {
           onChange={(e) => setSenderEmail(e.target.value)}
         />
         <textarea
-          className="h-52 my-3 rounded-lg resize-none borderBlack p-4 text-gray-700 dark:bg-white dark:text-white dark:bg-opacity-20 dark:focus:bg-opacity-10 transition-all dark:outline-none"
+          className="h-52 my-3 rounded-lg resize-none border border-black/10 dark:border-white/10 p-4 bg-white text-gray-700 dark:bg-white/20 dark:text-white dark:focus:bg-white/10 transition-all dark:outline-none"
           name="message"
           placeholder={language === "tr" ? "Mesajınız" : "Your message"}
           required
