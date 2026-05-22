@@ -24,6 +24,8 @@ export default function Project({
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
+  const isDNSSense = title === "DNSEye" || title === "DNSDome";
+
   const openWebsiteNewPage = (url: string) => {
     window.open(url, "_blank");
   };
@@ -62,9 +64,9 @@ export default function Project({
           src={imageUrl}
           alt="Project I Worked"
           quality={95}
-          width={400}
+          width={isDNSSense ? 300 : 400}
           height={100}
-          className="absolute hidden sm:block top-8 -right-28 rounded-t-lg transition group-hover:scale-110 group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-3 group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-3 group-even:right-[initial] group-even:-left-20"
+          className={`absolute hidden sm:block top-8 -right-28 rounded-t-lg transition group-hover:scale-110 group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-3 group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-3 group-even:right-[initial] group-even:-left-20 ${isDNSSense ? "right-5 group-even:left-5" : ""}`}
         />
       </section>
     </motion.div>

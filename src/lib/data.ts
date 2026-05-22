@@ -62,6 +62,26 @@ export const aboutData: About = {
 
 export const projectsData: ProjectInfo[] = [
   {
+    title: "DNSEye",
+    descriptionEn:
+      "DNSEye is an AI-powered DNS log analysis and threat detection platform. It identifies anomalies in outbound DNS traffic, traces malicious queries to their origins, and automates incident response through smart rule-based engines.",
+    descriptionTr:
+      "DNSEye, yapay zeka destekli bir DNS log analiz ve tehdit tespit platformudur. Giden DNS trafiğindeki anormallikleri tespit eder, kötü amaçlı sorguları kaynağına kadar izler ve akıllı kural tabanlı motorlar aracılığıyla olay müdahalesini otomatize eder.",
+    techs: ["Angular", "TypeScript", "RxJS"],
+    imageUrl: "/dnssense.ico",
+    link: "https://www.dnssense.com/dnseye",
+  },
+  {
+    title: "DNSDome",
+    descriptionEn:
+      "DNSDome is a DNS-layer cybersecurity product that protects all network devices against malware, phishing, ransomware, and zero-day threats using AI-based detection and a plug-and-play deployment model.",
+    descriptionTr:
+      "DNSDome, yapay zeka tabanlı tespit ve tak-çalıştır dağıtım modeliyle tüm ağ cihazlarını kötü amaçlı yazılım, kimlik avı, fidye yazılımı ve sıfırıncı gün tehditlerine karşı koruyan bir DNS katmanı siber güvenlik ürünüdür.",
+    techs: ["Angular", "TypeScript", "RxJS"],
+    imageUrl: "/dnssense.ico",
+    link: "https://www.dnssense.com/dnsdome",
+  },
+  {
     title: "ÇokNet",
     descriptionEn:
       "Çoknet is a multi-role digital education and management platform for students, administrators, and institutions.",
@@ -150,6 +170,10 @@ export const techStackData: TechStack[] = [
     title: "React Native",
   },
   {
+    logo: "SiAngular",
+    title: "Angular",
+  },
+  {
     logo: "SiTailwindcss",
     title: "Tailwind",
   },
@@ -206,17 +230,32 @@ export const techStackData: TechStack[] = [
 export const experiencesData: ExperienceInfo[] = [
   {
     isOdd: true,
+    titleEn: "Frontend Developer (Freelance)",
+    titleTr: "Frontend Developer (Freelance)",
+    company: "DNSSense",
+    companyUrl: "https://www.dnssense.com/",
+    companyLogo: "/dnssense.svg",
+    durationEn: "Feb 2026 - Apr 2026",
+    durationTr: "Şubat 2026 - Nisan 2026",
+    descriptionEn:
+      "At DNSSense, I worked as a freelance Frontend Developer for 3 months on DNS-based cybersecurity products. I contributed to the DNSEye and DNSDome projects, developing and improving user-facing features with Angular. I collaborated closely with the product team to deliver clean, maintainable UI components aligned with security-focused workflows.",
+    descriptionTr:
+      "DNSSense’te 3 aylık freelance Frontend Developer olarak görev aldım. DNS tabanlı siber güvenlik ürünlerinin geliştirilmesine katkı sağladım. DNSEye ve DNSDome projelerinde Angular kullanarak kullanıcı arayüzü özellikleri geliştirdim ve iyileştirdim. Ürün ekibiyle yakın iş birliği yaparak güvenlik odaklı iş akışlarına uygun, temiz ve sürdürülebilir bileşenler oluşturdum.",
+    techs: ["Angular", "TypeScript", "RxJS", "Git"],
+  },
+  {
+    isOdd: false,
     titleEn: "Full-Stack Developer",
     titleTr: "Full-Stack Developer",
     company: "KCTEK",
     companyUrl: "https://www.qulak.com/",
     companyLogo: "/qulak-logo.png",
-    durationEn: "Jan 2022 - Present",
-    durationTr: "Ocak 2022 - Halen",
+    durationEn: "Jan 2022 - Feb 2026",
+    durationTr: "Ocak 2022 - Şubat 2026",
     descriptionEn:
-      "At KCTEK, I work as a Senior Full Stack Developer on digital education and secure online exam platforms actively used in production environments. I contributed to critical modules such as cheating detection, user activity tracking, and secure exam workflows. I redesigned data flows between frontend and backend systems, built sustainable and maintainable architectures using Laravel, and actively participated in technical architecture and product-level decision-making processes.",
+      "At KCTEK, I worked as a Full Stack Developer on digital education and secure online exam platforms actively used in production environments. I contributed to critical modules such as cheating detection, user activity tracking, and secure exam workflows. I redesigned data flows between frontend and backend systems, built sustainable and maintainable architectures using Laravel, and actively participated in technical architecture and product-level decision-making processes.",
     descriptionTr:
-      "KCTEK’te dijital eğitim ve güvenli online sınav platformları üzerinde Full Stack Developer olarak çalışıyorum. Production ortamlarında aktif olarak kullanılan sistemlerde uçtan uca geliştirme sorumlulukları alıyorum. Kopya tespiti, kullanıcı aktivite takibi ve sınav güvenliği gibi kritik modüllerin geliştirilmesinde görev aldım. Frontend ve backend arasındaki veri akışlarını yeniden tasarladım, Laravel tabanlı servislerde sürdürülebilir ve bakımı kolay mimariler oluşturdum. Teknik mimari ve ürün karar süreçlerine aktif katkı sağlıyorum.",
+      "KCTEK’te dijital eğitim ve güvenli online sınav platformları üzerinde Full Stack Developer olarak çalıştım. Production ortamlarında aktif olarak kullanılan sistemlerde uçtan uca geliştirme sorumlulukları aldım. Kopya tespiti, kullanıcı aktivite takibi ve sınav güvenliği gibi kritik modüllerin geliştirilmesinde görev aldım. Frontend ve backend arasındaki veri akışlarını yeniden tasarladım, Laravel tabanlı servislerde sürdürülebilir ve bakımı kolay mimariler oluşturdum. Teknik mimari ve ürün karar süreçlerine aktif katkı sağladım.",
     techs: [
       "JavaScript",
       "TypeScript",
@@ -233,18 +272,18 @@ export const experiencesData: ExperienceInfo[] = [
     ],
   },
   {
-    isOdd: false,
-    titleEn: "Senior Frontend Developer",
-    titleTr: "Senior Frontend Developer",
+    isOdd: true,
+    titleEn: "Frontend Developer",
+    titleTr: "Frontend Developer",
     company: "MAYADEM",
     companyUrl: "https://www.mayadem.com/",
     companyLogo: "/mayadem.jpeg",
     durationEn: "Mar 2025 - Dec 2025",
     durationTr: "Mart 2025 - Aralık 2025",
     descriptionEn:
-      "At Mayadem, I worked as a Senior Frontend Developer on a multi-role digital education platform serving students, administrators, and institutions. My focus was on building scalable and maintainable frontend architectures. I developed performance-oriented user interfaces using React and TypeScript, optimized data fetching and caching with React Query, and designed reusable component structures to improve both development efficiency and user experience. I also actively participated in code reviews and frontend-related technical decision-making processes.",
+      "At Mayadem, I worked as a Frontend Developer on a multi-role digital education platform serving students, administrators, and institutions. My focus was on building scalable and maintainable frontend architectures. I developed performance-oriented user interfaces using React and TypeScript, optimized data fetching and caching with React Query, and designed reusable component structures to improve both development efficiency and user experience. I also actively participated in code reviews and frontend-related technical decision-making processes.",
     descriptionTr:
-      "Mayadem’de öğrenci, admin ve kurum kullanıcılarını kapsayan çok rollü bir dijital eğitim platformu üzerinde Senior Frontend Developer olarak çalıştım. Ölçeklenebilir ve sürdürülebilir frontend mimarileri geliştirmeye odaklandım. React ve TypeScript kullanarak performans odaklı kullanıcı arayüzleri oluşturdum. React Query ile veri yönetimini optimize ederek API çağrılarını azalttım ve tekrar kullanılabilir bileşen yapıları tasarladım. Ekip içinde code review süreçlerine ve frontend tarafındaki teknik karar mekanizmalarına aktif olarak katıldım.",
+      "Mayadem’de öğrenci, admin ve kurum kullanıcılarını kapsayan çok rollü bir dijital eğitim platformu üzerinde Frontend Developer olarak çalıştım. Ölçeklenebilir ve sürdürülebilir frontend mimarileri geliştirmeye odaklandım. React ve TypeScript kullanarak performans odaklı kullanıcı arayüzleri oluşturdum. React Query ile veri yönetimini optimize ederek API çağrılarını azalttım ve tekrar kullanılabilir bileşen yapıları tasarladım. Ekip içinde code review süreçlerine ve frontend tarafındaki teknik karar mekanizmalarına aktif olarak katıldım.",
     techs: [
       "React",
       "TypeScript",
@@ -257,20 +296,20 @@ export const experiencesData: ExperienceInfo[] = [
     ],
   },
   // {
-  //     isOdd: false,
-  //     titleEn: "Full-Stack Developer & DevOps (Remote)",
-  //     titleTr: "Full-Stack Developer & DevOps (Remote)",
-  //     company: "KIPS DIGITAL",
-  //     companyUrl: "https://www.kips.com.tr/",
-  //     companyLogo: "/kips.png",
-  //     durationEn: "Feb 2023 - Aug 2024",
-  //     durationTr: "Şubat 2023 - Ağustos 2024",
-  //     descriptionEn: "As an outsourced developer, I enhanced the infrastructure of the Kips E-Commerce platform using Laravel, Nginx, MySQL, and Docker. I improved loading times, increasing uptime by 10%, reduced deployment times by 20%, and decreased error rates by 15%, resulting in a more consistent and reliable release cycle.",
-  //     descriptionTr: "Outsource geliştirici olarak Kips E-Ticaret platformunda Laravel, Nginx, MySQL ve Docker kullanarak altyapıyı geliştirdim. Yükleme sürelerini hızlandırarak uptime oranını %10 artırdım, dağıtım sürelerini %20 kısalttım ve hata oranını %15 düşürerek daha tutarlı ve güvenilir bir sürüm döngüsü sağladım.",
-  //     techs: ["Laravel", "Nginx", "MySQL", "Docker", "Ubuntu", "Git", "Rest API"],
+  //   isOdd: false,
+  //   titleEn: "Full-Stack Developer & DevOps (Freelance)",
+  //   titleTr: "Full-Stack Developer & DevOps (Freelance)",
+  //   company: "KIPS DIGITAL",
+  //   companyUrl: "https://www.kips.com.tr/",
+  //   companyLogo: "/kips.png",
+  //   durationEn: "Feb 2023 - Aug 2024",
+  //   durationTr: "Şubat 2023 - Ağustos 2024",
+  //   descriptionEn: "As a freelance developer, I enhanced the infrastructure of the Kips E-Commerce platform using Laravel, Nginx, MySQL, and Docker. I improved loading times, increasing uptime by 10%, reduced deployment times by 20%, and decreased error rates by 15%, resulting in a more consistent and reliable release cycle.",
+  //   descriptionTr: "Freelance geliştirici olarak Kips E-Ticaret platformunda Laravel, Nginx, MySQL ve Docker kullanarak altyapıyı geliştirdim. Yükleme sürelerini hızlandırarak uptime oranını %10 artırdım, dağıtım sürelerini %20 kısalttım ve hata oranını %15 düşürerek daha tutarlı ve güvenilir bir sürüm döngüsü sağladım.",
+  //   techs: ["Laravel", "Nginx", "MySQL", "Docker", "Ubuntu", "Git", "Rest API"],
   // },
   {
-    isOdd: true,
+    isOdd: false,
     titleEn: "Information Technology Internship",
     titleTr: "Bilgi Teknolojileri Stajyeri",
     company: "KAYSERİ TİCARET ODASI",

@@ -22,6 +22,7 @@ import {
   SiMysql,
   SiReactquery,
   SiDocker,
+  SiAngular,
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 
@@ -37,6 +38,10 @@ const icons: { [key: string]: { component: React.JSX.Element; color: string } } 
   SiReact: {
     component: <SiReact />,
     color: "#61DAFB",
+  },
+  SiAngular: {
+    component: <SiAngular />,
+    color: "#DD0031",
   },
   SiTailwindcss: {
     component: <SiTailwindcss />,
