@@ -27,7 +27,7 @@ export default function Contact() {
 
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/sendEmail`,
+        `/api/sendEmail`,
         {
           method: "POST",
           headers: {
