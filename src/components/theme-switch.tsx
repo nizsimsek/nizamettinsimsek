@@ -29,7 +29,7 @@ export default function ThemeSwitch() {
               exit="hidden"
               variants={switchVariants}
               transition={{ duration: 0.3 }}
-              className="hidden  md:flex items-center justify-center w-[2rem] h-[2rem] bg-white  drop-shadow backdrop-blur-[0.5rem] border border-slate-400 dark:border-white border-opacity-40 shadow-2xl rounded-full dark:bg-gray-950"
+              className="hidden  md:flex items-center justify-center w-8 h-8 bg-white  drop-shadow backdrop-blur-[0.5rem] border border-slate-400 dark:border-white border-opacity-40 shadow-2xl rounded-full dark:bg-gray-950"
             >
               <p className="text-sm font-semibold">
                 {theme === "light" ? <Sun /> : <Moon />}
@@ -40,7 +40,7 @@ export default function ThemeSwitch() {
 
         <motion.button
           aria-label={language === "tr" ? "Tema Değiştir" : "Switch Theme"}
-          className="bg-white w-[3rem] h-[3rem] drop-shadow backdrop-blur-[0.5rem] border border-slate-400 dark:border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center dark:bg-gray-950"
+          className="bg-white w-12 h-12 drop-shadow backdrop-blur-[0.5rem] border border-slate-400 dark:border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center dark:bg-gray-950"
           variants={switchVariants}
           initial="visible"
           whileHover="hover"

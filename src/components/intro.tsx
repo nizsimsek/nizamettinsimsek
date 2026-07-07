@@ -22,7 +22,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="max-w-[75rem] text-center mb-32 sm:mb-40 scroll-mt-[100rem]"
+      className="max-w-300 text-center mb-32 sm:mb-40 scroll-mt-400"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -41,9 +41,9 @@ export default function Intro() {
               src="/work.png"
               width="240"
               height="240"
-              alt="portrait"
+              alt="Nizamettin Şimşek - Co-founder & Frontend Developer"
               quality="75"
-              loading="lazy"
+              priority
               sizes="(max-width: 288px) 100vw, 480px"
               className="rounded-full object-cover shadow-xl w-full"
             />
@@ -59,7 +59,7 @@ export default function Intro() {
         triggerOnce={true}
       >
         <h1 className="mb-10 mt-4 px-4 text-2xl sm:text-4xl">
-          <span className="font-medium !leading-[1.5] ">
+          <span className="font-medium leading-normal! ">
             {language === "tr" ? homeData.titleTr : homeData.titleEn}
           </span>
           <p className="text-lg max-w-3xl">

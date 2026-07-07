@@ -35,9 +35,9 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ links }) => {
   }, []);
 
   return (
-    <div className="md:hidden top-5 right-5 fixed w-60 z-[999] flex flex-col items-end gap-2">
+    <div className="md:hidden top-5 right-5 fixed w-60 z-999 flex flex-col items-end gap-2">
       <motion.div
-        className="bg-white w-[3rem] h-[3rem] drop-shadow backdrop-blur-[0.5rem] border border-slate-400 dark:border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center dark:bg-gray-950"
+        className="bg-white w-12 h-12 drop-shadow backdrop-blur-[0.5rem] border border-slate-400 dark:border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center dark:bg-gray-950"
         variants={menuTrigger}
         initial="visible"
         whileTap="tap"

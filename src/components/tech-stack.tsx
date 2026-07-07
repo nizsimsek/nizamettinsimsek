@@ -119,7 +119,7 @@ export default function TechStack() {
     <section
       id="tech-stack"
       ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      className="mb-28 max-w-212 scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading>
         {language === "tr" ? "Teknolojiler" : "Tech Stack"}

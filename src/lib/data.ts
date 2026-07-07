@@ -44,9 +44,9 @@ export const homeData: Home = {
   titleEn: "Hi, I'm Nizamettin Şimşek",
   titleTr: "Merhaba, Ben Nizamettin Şimşek",
   descriptionEn:
-    "A passionate fullstack developer with experience in building scalable web applications using modern technologies. I enjoy solving complex problems and creating user-friendly interfaces.",
+    "Co-founder & Frontend Developer at Let Wash, building a car wash marketplace platform in Palo Alto. I create scalable, user-friendly web experiences with React, Next.js, and TypeScript.",
   descriptionTr:
-    "Modern teknolojileri kullanarak ölçeklenebilir web uygulamaları oluşturma deneyimi olan, karmaşık problemleri çözmek ve kullanıcı dostu arayüzler oluşturmaktan keyif alan bir yazılımcıyım.",
+    "Palo Alto merkezli Let Wash'ta Co-founder & Frontend Developer olarak araç yıkama marketplace platformu geliştiriyorum. React, Next.js ve TypeScript ile ölçeklenebilir, kullanıcı dostu web deneyimleri oluşturuyorum.",
 };
 
 export const aboutData: About = {
@@ -61,6 +61,16 @@ export const aboutData: About = {
 };
 
 export const projectsData: ProjectInfo[] = [
+  {
+    title: "Let Wash",
+    descriptionEn:
+      "Let Wash is a car wash marketplace and SaaS platform that helps drivers find, book, and pay for local car washes while giving operators tools for online payments, bookings, AI-driven pricing, and marketing campaigns.",
+    descriptionTr:
+      "Let Wash, sürücülerin yakındaki araç yıkamalarını bulup rezerve edip ödemesini yapmasını sağlayan; işletmelere ise online ödeme, rezervasyon, yapay zeka destekli fiyatlandırma ve pazarlama araçları sunan bir marketplace ve SaaS platformudur.",
+    techs: ["React", "Next.js", "TypeScript", "TailwindCSS"],
+    imageUrl: "/letwash.png",
+    link: "https://www.letwash.com/",
+  },
   {
     title: "DNSEye",
     descriptionEn:
@@ -230,6 +240,21 @@ export const techStackData: TechStack[] = [
 export const experiencesData: ExperienceInfo[] = [
   {
     isOdd: true,
+    titleEn: "Co-founder & Frontend Developer",
+    titleTr: "Co-founder & Frontend Developer",
+    company: "Let Wash",
+    companyUrl: "https://www.letwash.com/",
+    companyLogo: "/letwash.png",
+    durationEn: "Jul 2026 - Present",
+    durationTr: "Temmuz 2026 - Devam Ediyor",
+    descriptionEn:
+      "As Co-founder & Frontend Developer at Let Wash in Palo Alto, I help build a car wash marketplace and SaaS platform for operators and drivers. I lead frontend development for consumer-facing booking flows, operator dashboards, and product experiences focused on performance, usability, and scalable architecture.",
+    descriptionTr:
+      "Palo Alto merkezli Let Wash'ta Co-founder & Frontend Developer olarak araç yıkama marketplace ve SaaS platformunun geliştirilmesinde yer alıyorum. Kullanıcı tarafındaki rezervasyon akışları, işletme panelleri ve ürün deneyimlerinin frontend geliştirmesini; performans, kullanılabilirlik ve ölçeklenebilir mimari odağıyla yürütüyorum.",
+    techs: ["React", "Next.js", "TypeScript", "TailwindCSS", "Git"],
+  },
+  {
+    isOdd: false,
     titleEn: "Frontend Developer (Freelance)",
     titleTr: "Frontend Developer (Freelance)",
     company: "DNSSense",
@@ -244,7 +269,7 @@ export const experiencesData: ExperienceInfo[] = [
     techs: ["Angular", "TypeScript", "RxJS", "Git"],
   },
   {
-    isOdd: false,
+    isOdd: true,
     titleEn: "Full-Stack Developer",
     titleTr: "Full-Stack Developer",
     company: "KCTEK",
@@ -272,7 +297,7 @@ export const experiencesData: ExperienceInfo[] = [
     ],
   },
   {
-    isOdd: true,
+    isOdd: false,
     titleEn: "Frontend Developer",
     titleTr: "Frontend Developer",
     company: "MAYADEM",
@@ -309,7 +334,7 @@ export const experiencesData: ExperienceInfo[] = [
   //   techs: ["Laravel", "Nginx", "MySQL", "Docker", "Ubuntu", "Git", "Rest API"],
   // },
   {
-    isOdd: false,
+    isOdd: true,
     titleEn: "Information Technology Internship",
     titleTr: "Bilgi Teknolojileri Stajyeri",
     company: "KAYSERİ TİCARET ODASI",

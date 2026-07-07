@@ -17,20 +17,21 @@ const siteUrl = "https://nizamettinsimsek.com.tr";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Nizamettin Şimşek | Full Stack Developer",
+    default: "Nizamettin Şimşek | Co-founder & Frontend Developer",
     template: "%s | Nizamettin Şimşek",
   },
   description:
-    "Nizamettin Şimşek is a Full Stack Developer based in Turkey, specializing in React, Next.js, TypeScript, Laravel, and modern web technologies. Available for freelance and full-time opportunities.",
+    "Nizamettin Şimşek is Co-founder & Frontend Developer at Let Wash in Palo Alto, building a car wash marketplace platform with React, Next.js, and TypeScript.",
   keywords: [
     "Nizamettin Şimşek",
-    "Full Stack Developer",
+    "Co-founder",
     "Frontend Developer",
+    "Let Wash",
+    "Full Stack Developer",
     "React Developer",
     "Next.js Developer",
     "TypeScript",
-    "Laravel",
-    "Web Developer Turkey",
+    "Web Developer",
     "Yazılım Geliştirici",
     "Frontend Geliştirici",
   ],
@@ -56,24 +57,24 @@ export const metadata: Metadata = {
     alternateLocale: "en_US",
     url: siteUrl,
     siteName: "Nizamettin Şimşek",
-    title: "Nizamettin Şimşek | Full Stack Developer",
+    title: "Nizamettin Şimşek | Co-founder & Frontend Developer",
     description:
-      "Full Stack Developer specializing in React, Next.js, TypeScript, and Laravel. Building scalable and user-friendly web applications.",
+      "Co-founder & Frontend Developer at Let Wash. Building a car wash marketplace platform with React, Next.js, and TypeScript.",
     images: [
       {
-        url: "/work.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Nizamettin Şimşek - Full Stack Developer",
+        alt: "Nizamettin Şimşek - Co-founder & Frontend Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nizamettin Şimşek | Full Stack Developer",
+    title: "Nizamettin Şimşek | Co-founder & Frontend Developer",
     description:
-      "Full Stack Developer specializing in React, Next.js, TypeScript, and Laravel.",
-    images: ["/work.png"],
+      "Co-founder & Frontend Developer at Let Wash. Building a car wash marketplace platform with React, Next.js, and TypeScript.",
+    images: ["/opengraph-image"],
     creator: "@nizsimsek",
   },
   icons: {
@@ -90,60 +91,86 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": `${siteUrl}/#person`,
-  name: "Nizamettin Şimşek",
-  alternateName: ["Nizamettin Simsek", "Niz Şimşek", "nizsimsek"],
-  url: siteUrl,
-  image: `${siteUrl}/work.png`,
-  jobTitle: "Full Stack Developer",
-  description:
-    "Full Stack Developer specializing in React, Next.js, TypeScript, and Laravel. Building scalable and user-friendly web applications.",
-  sameAs: [
-    "https://www.linkedin.com/in/nizsimsek/",
-    "https://www.github.com/nizsimsek/",
-    "https://nizsimsek.dev",
-  ],
-  worksFor: [
+  "@graph": [
     {
-      "@type": "Organization",
-      name: "DNSSense",
-      url: "https://www.dnssense.com/",
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "Nizamettin Şimşek",
+      description:
+        "Portfolio of Nizamettin Şimşek, Co-founder & Frontend Developer at Let Wash.",
+      inLanguage: "tr-TR",
+      publisher: { "@id": `${siteUrl}/#person` },
     },
     {
-      "@type": "Organization",
-      name: "Mayadem",
-      url: "https://www.mayadem.com/",
-    },
-    {
-      "@type": "Organization",
-      name: "KCTEK",
-      url: "https://www.qulak.com/",
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      name: "Nizamettin Şimşek",
+      alternateName: ["Nizamettin Simsek", "Niz Şimşek", "nizsimsek"],
+      url: siteUrl,
+      image: `${siteUrl}/work.png`,
+      jobTitle: "Co-founder & Frontend Developer",
+      description:
+        "Co-founder & Frontend Developer at Let Wash, building a car wash marketplace and SaaS platform in Palo Alto with React, Next.js, and TypeScript.",
+      sameAs: [
+        "https://www.linkedin.com/in/nizsimsek/",
+        "https://www.github.com/nizsimsek/",
+        "https://nizsimsek.dev",
+        "https://www.letwash.com/",
+      ],
+      worksFor: [
+        {
+          "@type": "Organization",
+          name: "Let Wash",
+          url: "https://www.letwash.com/",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Palo Alto",
+            addressRegion: "CA",
+            addressCountry: "US",
+          },
+        },
+        {
+          "@type": "Organization",
+          name: "DNSSense",
+          url: "https://www.dnssense.com/",
+        },
+        {
+          "@type": "Organization",
+          name: "Mayadem",
+          url: "https://www.mayadem.com/",
+        },
+        {
+          "@type": "Organization",
+          name: "KCTEK",
+          url: "https://www.qulak.com/",
+        },
+      ],
+      knowsAbout: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "Laravel",
+        "Angular",
+        "Node.js",
+        "WebRTC",
+        "WebSocket",
+        "TailwindCSS",
+        "Docker",
+        "MySQL",
+        "PostgreSQL",
+      ],
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "TR",
+      },
+      nationality: {
+        "@type": "Country",
+        name: "Turkey",
+      },
     },
   ],
-  knowsAbout: [
-    "React",
-    "Next.js",
-    "TypeScript",
-    "JavaScript",
-    "Laravel",
-    "Angular",
-    "Node.js",
-    "WebRTC",
-    "WebSocket",
-    "TailwindCSS",
-    "Docker",
-    "MySQL",
-    "PostgreSQL",
-  ],
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: "TR",
-  },
-  nationality: {
-    "@type": "Country",
-    name: "Turkey",
-  },
 };
 
 export default function RootLayout({
