@@ -1,6 +1,10 @@
-import { links } from "./data";
-
-export type SectionName = (typeof links)[number]["hash"];
+export type SectionName =
+    | "#home"
+    | "#about"
+    | "#experiences"
+    | "#tech-stack"
+    | "#projects"
+    | "#contact";
 
 export type Home = {
     titleEn: string;
@@ -47,5 +51,6 @@ export type ExperienceInfo = {
 export type Link = {
     titleTr: string;
     titleEn: string;
-    hash: string;
+    href: string;
+    sectionId?: SectionName;
 };

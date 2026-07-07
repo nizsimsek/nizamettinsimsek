@@ -57,7 +57,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ links }) => {
             {links.map((link, index) => (
               <motion.div
                 className="w-full"
-                key={link.hash}
+                key={link.href}
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
               >
@@ -67,18 +67,21 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ links }) => {
                     "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300 cursor-pointer",
                     {
                       "text-gray-950 bg-slate-200 dark:text-gray-200 dark:bg-gray-700 rounded":
-                        activeSection === link.hash,
+                        link.sectionId && activeSection === link.sectionId,
                       "rounded-t-xl round": index === 0,
                       "rounded-b-xl round": index === links.length - 1,
                     }
                   )}
-                  href={link.hash}
+                  href={link.href}
                   onClick={() => {
-                    setActiveSection(link.hash);
-                    setTimeOfLastClick(Date.now());
+                    if (link.sectionId) {
+                      setActiveSection(link.sectionId);
+                      setTimeOfLastClick(Date.now());
+                    }
+                    setIsOpen(false);
                   }}
                 >
-                  {link.titleEn}
+                  {language === "tr" ? link.titleTr : link.titleEn}
                 </NextLink>
               </motion.div>
             ))}

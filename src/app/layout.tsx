@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Nizamettin Şimşek",
   },
   description:
-    "Nizamettin Şimşek is Co-founder & Frontend Developer at Let Wash in Palo Alto, building a car wash marketplace platform with React, Next.js, and TypeScript.",
+    "Nizamettin Şimşek is Co-founder & Frontend Developer at Let Wash in Palo Alto, building a multi-role SaaS web platform (Root, Owner, Admin, Washer) with React, Vite, and TypeScript.",
   keywords: [
     "Nizamettin Şimşek",
     "Co-founder",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     siteName: "Nizamettin Şimşek",
     title: "Nizamettin Şimşek | Co-founder & Frontend Developer",
     description:
-      "Co-founder & Frontend Developer at Let Wash. Building a car wash marketplace platform with React, Next.js, and TypeScript.",
+      "Co-founder & Frontend Developer at Let Wash. Building a multi-role SaaS web platform with React, Vite, and TypeScript.",
     images: [
       {
         url: "/opengraph-image",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nizamettin Şimşek | Co-founder & Frontend Developer",
     description:
-      "Co-founder & Frontend Developer at Let Wash. Building a car wash marketplace platform with React, Next.js, and TypeScript.",
+      "Co-founder & Frontend Developer at Let Wash. Building a multi-role SaaS web platform with React, Vite, and TypeScript.",
     images: ["/opengraph-image"],
     creator: "@nizsimsek",
   },
@@ -111,7 +111,7 @@ const jsonLd = {
       image: `${siteUrl}/work.png`,
       jobTitle: "Co-founder & Frontend Developer",
       description:
-        "Co-founder & Frontend Developer at Let Wash, building a car wash marketplace and SaaS platform in Palo Alto with React, Next.js, and TypeScript.",
+        "Co-founder & Frontend Developer at Let Wash, building a multi-role SaaS web platform for Root, Carwash Owner, Carwash Admin, and Washer in Palo Alto with React, Vite, and TypeScript.",
       sameAs: [
         "https://www.linkedin.com/in/nizsimsek/",
         "https://www.github.com/nizsimsek/",

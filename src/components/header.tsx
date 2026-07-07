@@ -26,7 +26,7 @@ export default function Header({ links }: HeaderProps) {
           {links.map((link) => (
             <motion.li
               className="flex items-center justify-center relative"
-              key={link.hash}
+              key={link.href}
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
@@ -36,17 +36,19 @@ export default function Header({ links }: HeaderProps) {
                   "flex w-full items-center justify-center px-3 py-3 text-gray-600 hover:text-black transition dark:text-gray-400 dark:hover:text-gray-50",
                   {
                     "text-black dark:text-gray-200":
-                      activeSection === link.hash,
+                      link.sectionId && activeSection === link.sectionId,
                   }
                 )}
-                href={link.hash}
+                href={link.href}
                 onClick={() => {
-                  setActiveSection(link.hash);
-                  setTimeOfLastClick(Date.now());
+                  if (link.sectionId) {
+                    setActiveSection(link.sectionId);
+                    setTimeOfLastClick(Date.now());
+                  }
                 }}
               >
                 {language === "tr" ? link.titleTr : link.titleEn}
-                {link.hash === activeSection && (
+                {link.sectionId && link.sectionId === activeSection && (
                   <motion.span
                     className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
                     layoutId="activeSection"

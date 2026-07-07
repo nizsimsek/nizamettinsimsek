@@ -11,32 +11,43 @@ export const links: Link[] = [
   {
     titleEn: "Home",
     titleTr: "Anasayfa",
-    hash: "#home",
+    href: "/#home",
+    sectionId: "#home",
   },
   {
     titleEn: "About",
     titleTr: "Hakkımda",
-    hash: "#about",
+    href: "/#about",
+    sectionId: "#about",
   },
   {
     titleEn: "Experience",
     titleTr: "Deneyim",
-    hash: "#experiences",
+    href: "/#experiences",
+    sectionId: "#experiences",
   },
   {
     titleEn: "Tech Stack",
     titleTr: "Teknolojiler",
-    hash: "#tech-stack",
+    href: "/#tech-stack",
+    sectionId: "#tech-stack",
   },
   {
     titleEn: "Projects",
     titleTr: "Projeler",
-    hash: "#projects",
+    href: "/#projects",
+    sectionId: "#projects",
+  },
+  {
+    titleEn: "Blog",
+    titleTr: "Blog",
+    href: "/blogs",
   },
   {
     titleEn: "Contact",
     titleTr: "İletişim",
-    hash: "#contact",
+    href: "/#contact",
+    sectionId: "#contact",
   },
 ];
 
@@ -44,9 +55,9 @@ export const homeData: Home = {
   titleEn: "Hi, I'm Nizamettin Şimşek",
   titleTr: "Merhaba, Ben Nizamettin Şimşek",
   descriptionEn:
-    "Co-founder & Frontend Developer at Let Wash, building a car wash marketplace platform in Palo Alto. I create scalable, user-friendly web experiences with React, Next.js, and TypeScript.",
+    "Co-founder & Frontend Developer at Let Wash, building a multi-role SaaS web platform (Root, Owner, Admin, Washer) in Palo Alto with React, Vite, and TypeScript.",
   descriptionTr:
-    "Palo Alto merkezli Let Wash'ta Co-founder & Frontend Developer olarak araç yıkama marketplace platformu geliştiriyorum. React, Next.js ve TypeScript ile ölçeklenebilir, kullanıcı dostu web deneyimleri oluşturuyorum.",
+    "Palo Alto merkezli Let Wash'ta Co-founder & Frontend Developer olarak Root, Owner, Admin ve Washer rolleri için çok rollü SaaS web platformunu geliştiriyorum. React, Vite, TanStack Router ve TypeScript ile ölçeklenebilir panel deneyimleri oluşturuyorum.",
 };
 
 export const aboutData: About = {
@@ -64,10 +75,10 @@ export const projectsData: ProjectInfo[] = [
   {
     title: "Let Wash",
     descriptionEn:
-      "Let Wash is a car wash marketplace and SaaS platform that helps drivers find, book, and pay for local car washes while giving operators tools for online payments, bookings, AI-driven pricing, and marketing campaigns.",
+      "Let Wash is a multi-role SaaS web platform for Root, Carwash Owner, Carwash Admin, and Washer — covering business management, operations, payments, and field workflows.",
     descriptionTr:
-      "Let Wash, sürücülerin yakındaki araç yıkamalarını bulup rezerve edip ödemesini yapmasını sağlayan; işletmelere ise online ödeme, rezervasyon, yapay zeka destekli fiyatlandırma ve pazarlama araçları sunan bir marketplace ve SaaS platformudur.",
-    techs: ["React", "Next.js", "TypeScript", "TailwindCSS"],
+      "Let Wash, Root, Carwash Owner, Carwash Admin ve Washer rolleri için çok rollü bir SaaS web platformudur; işletme yönetimi, operasyon, ödeme ve saha süreçlerini kapsar.",
+    techs: ["React", "Vite", "TypeScript", "TanStack Router", "TailwindCSS"],
     imageUrl: "/letwash.png",
     link: "https://www.letwash.com/",
   },
@@ -248,10 +259,19 @@ export const experiencesData: ExperienceInfo[] = [
     durationEn: "Jul 2026 - Present",
     durationTr: "Temmuz 2026 - Devam Ediyor",
     descriptionEn:
-      "As Co-founder & Frontend Developer at Let Wash in Palo Alto, I help build a car wash marketplace and SaaS platform for operators and drivers. I lead frontend development for consumer-facing booking flows, operator dashboards, and product experiences focused on performance, usability, and scalable architecture.",
+      "As Co-founder & Frontend Developer at Let Wash in Palo Alto, I build the multi-role SaaS web platform for Root, Carwash Owner, Carwash Admin, and Washer. I lead frontend development for role-based dashboards, operations flows, and Stripe Connect integrations with a focus on performance, usability, and scalable architecture.",
     descriptionTr:
-      "Palo Alto merkezli Let Wash'ta Co-founder & Frontend Developer olarak araç yıkama marketplace ve SaaS platformunun geliştirilmesinde yer alıyorum. Kullanıcı tarafındaki rezervasyon akışları, işletme panelleri ve ürün deneyimlerinin frontend geliştirmesini; performans, kullanılabilirlik ve ölçeklenebilir mimari odağıyla yürütüyorum.",
-    techs: ["React", "Next.js", "TypeScript", "TailwindCSS", "Git"],
+      "Palo Alto merkezli Let Wash'ta Co-founder & Frontend Developer olarak Root, Carwash Owner, Carwash Admin ve Washer rolleri için çok rollü SaaS web platformunu geliştiriyorum. Rol bazlı paneller, operasyon akışları ve Stripe Connect entegrasyonlarının frontend geliştirmesini; performans, kullanılabilirlik ve ölçeklenebilir mimari odağıyla yürütüyorum.",
+    techs: [
+      "React",
+      "Vite",
+      "TypeScript",
+      "TanStack Router",
+      "TanStack Query",
+      "Zustand",
+      "TailwindCSS",
+      "Stripe",
+    ],
   },
   {
     isOdd: false,
