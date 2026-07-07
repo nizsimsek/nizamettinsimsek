@@ -37,7 +37,7 @@ export default function BlogContent({ content }: BlogContentProps) {
             </strong>
           ),
           code: ({ children }) => (
-            <code className="bg-gray-200 dark:bg-gray-800 px-1.5 py-0.5 rounded text-sm font-mono">
+            <code className="bg-gray-200 text-gray-900 dark:bg-gray-800 dark:text-gray-100 px-1.5 py-0.5 rounded text-sm font-mono in-[pre]:bg-transparent in-[pre]:dark:bg-transparent in-[pre]:text-inherit in-[pre]:p-0 in-[pre]:rounded-none">
               {children}
             </code>
           ),
