@@ -3,7 +3,6 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import { Fade } from "react-awesome-reveal";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useSectionInView } from "@/lib/useInView";
@@ -38,25 +37,24 @@ export default function Intro() {
             className="max-w-72 sm:max-w-md"
           >
             <Image
-              src="/work.png"
-              width="240"
-              height="240"
+              src="/work-hero.webp"
+              width={288}
+              height={288}
               alt="Nizamettin Şimşek - Co-founder & Frontend Developer"
-              quality="75"
+              quality={80}
               priority
-              sizes="(max-width: 288px) 100vw, 480px"
+              fetchPriority="high"
+              sizes="(max-width: 640px) 288px, 384px"
               className="rounded-full object-cover shadow-xl w-full"
             />
           </motion.div>
         </div>
       </div>
 
-      <Fade
-        direction="up"
-        delay={400}
-        cascade
-        damping={1e-1}
-        triggerOnce={true}
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.4 }}
       >
         <h1 className="mb-10 mt-4 px-4 text-2xl sm:text-4xl">
           <span className="font-medium leading-normal! ">
@@ -66,7 +64,7 @@ export default function Intro() {
             {language === "tr" ? homeData.descriptionTr : homeData.descriptionEn}
           </p>
         </h1>
-      </Fade>
+      </motion.div>
 
       <motion.div
         className="flex sm:flex-row items-center justify-center gap-2 sm:gap-4 px-4 text-lg font-medium"
@@ -85,7 +83,7 @@ export default function Intro() {
           }}
           aria-label={language === "tr" ? "İletişim" : "Contact"}
         >
-          {language === "tr" ? "İletişim" : "Contact"} <Mail />
+          {language === "tr" ? "İletişim" : "Contact"} <Mail aria-hidden="true" />
         </Link>
 
         <a
@@ -95,7 +93,7 @@ export default function Intro() {
           rel="noopener noreferrer"
           aria-label={language === "tr" ? "LinkedIn Profilimi Görüntüle" : "View My LinkedIn Profile"}
         >
-          <FaLinkedin />
+          <FaLinkedin aria-hidden="true" />
         </a>
 
         <a
@@ -105,7 +103,7 @@ export default function Intro() {
           rel="noopener noreferrer"
           aria-label={language === "tr" ? "GitHub Profilimi Görüntüle" : "View My GitHub Profile"}
         >
-          <FaGithub />
+          <FaGithub aria-hidden="true" />
         </a>
 
         <a
@@ -115,7 +113,7 @@ export default function Intro() {
           rel="noopener noreferrer"
           aria-label={language === "tr" ? "CV'yi İndir" : "Download Resume"}
         >
-          <BsFiletypePdf />
+          <BsFiletypePdf aria-hidden="true" />
         </a>
       </motion.div>
     </section>

@@ -64,7 +64,7 @@ export default function Experience({
       className="group mb-6 sm:mb-8 last:mb-0 hover:cursor-pointer overflow-hidden"
       onClick={() => openWebsiteNewPage(companyUrl)}
     >
-      <section className="bg-white max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
+      <section className="bg-white max-w-2xl border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 flex flex-col h-full">
           <div className="flex items-center gap-2">
             <div className="w-14 h-14 min-w-14 min-h-14 relative overflow-hidden flex items-center justify-center">
@@ -80,13 +80,13 @@ export default function Experience({
               <h3 className="text-2xl w-fit font-semibold">
                 {language === "tr" ? titleTr : titleEn}
               </h3>
-              <h3 className="flex gap-1 text-lg w-fit font-semibold items-center border-b-2 border-b-white/0 group-hover:border-b-black dark:border-b-white/0 dark:group-hover:border-b-white/100">
-                <FaExternalLinkAlt className="hidden group-hover:block text-sm" />
+              <h3 className="flex gap-1 text-lg w-fit font-semibold items-center border-b-2 border-b-white/0 group-hover:border-b-black dark:border-b-white/0 dark:group-hover:border-b-white">
+                <FaExternalLinkAlt aria-hidden="true" className="hidden group-hover:block text-sm" />
                 {company}
               </h3>
             </div>
           </div>
-          <p className="text-sm text-gray-500 dark:text-white/50 mt-2">
+          <p className="text-sm text-gray-900 dark:text-gray-300 mt-2">
             {language === "tr" ? durationTr : durationEn}
           </p>
           <p className="mt-2 leading-relaxed text-gray-900 dark:text-white/90">

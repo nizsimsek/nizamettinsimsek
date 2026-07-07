@@ -24,7 +24,7 @@ export default function BlogCard({ post }: BlogCardProps) {
     <article className="bg-white max-w-2xl w-full border border-black/5 rounded-lg overflow-hidden hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20 p-6 sm:p-8 text-left">
       <time
         dateTime={post.publishedAt}
-        className="text-sm text-gray-500 dark:text-white/50"
+        className="text-sm text-gray-900 dark:text-gray-300"
       >
         {formattedDate} · {post.readingTime[language]}
       </time>
@@ -51,7 +51,7 @@ export default function BlogCard({ post }: BlogCardProps) {
       </ul>
       <Link
         href={`/blogs/${post.slug}`}
-        className="inline-block mt-5 text-sm font-medium text-gray-700 dark:text-white/80 hover:underline"
+        className="inline-block mt-5 text-sm font-medium text-gray-900 dark:text-white/80 hover:underline"
       >
         {language === "tr" ? "Devamını oku →" : "Read more →"}
       </Link>

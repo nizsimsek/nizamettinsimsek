@@ -33,7 +33,7 @@ export default function BlogArticle({ post }: BlogArticleProps) {
       <header className="mt-6 mb-10 text-center">
         <time
           dateTime={post.publishedAt}
-          className="text-sm text-gray-500 dark:text-white/50"
+          className="text-sm text-gray-900 dark:text-gray-300"
         >
           {formattedDate} · {post.readingTime[language]}
         </time>

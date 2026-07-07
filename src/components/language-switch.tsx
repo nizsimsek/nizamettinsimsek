@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Moon, Sun } from "lucide-react";
 import { useLanguage } from "@/containers/language-context";
 import Image from "next/image";
 
@@ -34,7 +33,8 @@ export default function LanguageSwitch() {
                 {language === "tr" ? (
                   <Image
                     src="/tr.png"
-                    alt="Turkish"
+                    alt=""
+                    aria-hidden="true"
                     width={24}
                     height={24}
                     className="rounded-full"
@@ -42,7 +42,8 @@ export default function LanguageSwitch() {
                 ) : (
                   <Image
                     src="/en.png"
-                    alt="English"
+                    alt=""
+                    aria-hidden="true"
                     width={24}
                     height={24}
                     className="rounded-full"
@@ -67,7 +68,8 @@ export default function LanguageSwitch() {
             {language === "tr" ? (
               <Image
                 src="/en.png"
-                alt="Turkish"
+                alt=""
+                aria-hidden="true"
                 width={36}
                 height={36}
                 className="rounded-full"
@@ -75,7 +77,8 @@ export default function LanguageSwitch() {
             ) : (
               <Image
                 src="/tr.png"
-                alt="English"
+                alt=""
+                aria-hidden="true"
                 width={36}
                 height={36}
                 className="rounded-full"

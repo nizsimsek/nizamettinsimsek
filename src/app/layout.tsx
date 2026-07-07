@@ -9,7 +9,8 @@ import LanguageSwitch from "@/components/language-switch";
 const sora = Sora({
   subsets: ["latin"],
   variable: "--font-sora",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 const siteUrl = "https://nizamettinsimsek.com.tr";
@@ -181,6 +182,13 @@ export default function RootLayout({
   return (
     <html lang="tr" className="scroll-smooth! overflow-x-hidden max-w-full w-full">
       <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/work-hero.webp"
+          type="image/webp"
+          fetchPriority="high"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

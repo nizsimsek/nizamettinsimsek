@@ -19,7 +19,7 @@ export default function SubmitBtn({ text, disabled }: SubmitBtnProps) {
       ) : (
         <>
           {text}
-          <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1" />
+          <FaPaperPlane aria-hidden="true" className="text-xs opacity-70 transition-all group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1" />
         </>
       )}
     </button>

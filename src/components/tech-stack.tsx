@@ -25,76 +25,26 @@ import {
   SiAngular,
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
+import type { IconType } from "react-icons";
 
-const icons: { [key: string]: { component: React.JSX.Element; color: string } } = {
-  SiJavascript: {
-    component: <SiJavascript />,
-    color: "#F7DF1E",
-  },
-  SiTypescript: {
-    component: <SiTypescript />,
-    color: "#3178C6",
-  },
-  SiReact: {
-    component: <SiReact />,
-    color: "#61DAFB",
-  },
-  SiAngular: {
-    component: <SiAngular />,
-    color: "#DD0031",
-  },
-  SiTailwindcss: {
-    component: <SiTailwindcss />,
-    color: "#06B6D4",
-  },
-  SiBootstrap: {
-    component: <SiBootstrap />,
-    color: "#7952B3",
-  },
-  SiRedux: {
-    component: <SiRedux />,
-    color: "#764ABC",
-  },
-  SiFramer: {
-    component: <SiFramer />,
-    color: "#000",
-  },
-  SiReactQuery: {
-    component: <SiReactquery />,
-    color: "#FD611D",
-  },
-  SiGraphql: {
-    component: <SiGraphql />,
-    color: "#E10098",
-  },
-  SiNextdotjs: {
-    component: <SiNextdotjs />,
-    color: "#000",
-  },
-  SiGit: {
-    component: <SiGit />,
-    color: "#F05032",
-  },
-  SiSocketdotio: {
-    component: <SiSocketdotio />,
-    color: "#000",
-  },
-  SiWebrtc: {
-    component: <SiWebrtc />,
-    color: "#009938",
-  },
-  SiMysql: {
-    component: <SiMysql />,
-    color: "#3D6E93",
-  },
-  BiLogoPostgresql: {
-    component: <BiLogoPostgresql />,
-    color: "#336790",
-  },
-  SiDocker: {
-    component: <SiDocker />,
-    color: "#2460FF",
-  },
+const icons: Record<string, { Icon: IconType; color: string }> = {
+  SiJavascript: { Icon: SiJavascript, color: "#F7DF1E" },
+  SiTypescript: { Icon: SiTypescript, color: "#3178C6" },
+  SiReact: { Icon: SiReact, color: "#61DAFB" },
+  SiAngular: { Icon: SiAngular, color: "#DD0031" },
+  SiTailwindcss: { Icon: SiTailwindcss, color: "#06B6D4" },
+  SiBootstrap: { Icon: SiBootstrap, color: "#7952B3" },
+  SiRedux: { Icon: SiRedux, color: "#764ABC" },
+  SiFramer: { Icon: SiFramer, color: "#000" },
+  SiReactQuery: { Icon: SiReactquery, color: "#FD611D" },
+  SiGraphql: { Icon: SiGraphql, color: "#E10098" },
+  SiNextdotjs: { Icon: SiNextdotjs, color: "#000" },
+  SiGit: { Icon: SiGit, color: "#F05032" },
+  SiSocketdotio: { Icon: SiSocketdotio, color: "#000" },
+  SiWebrtc: { Icon: SiWebrtc, color: "#009938" },
+  SiMysql: { Icon: SiMysql, color: "#3D6E93" },
+  BiLogoPostgresql: { Icon: BiLogoPostgresql, color: "#336790" },
+  SiDocker: { Icon: SiDocker, color: "#2460FF" },
 };
 
 const fadeInAnimationVariants = {
@@ -111,6 +61,37 @@ const fadeInAnimationVariants = {
   }),
 };
 
+function TechStackItem({
+  tech,
+  index,
+}: {
+  tech: { logo: string; title: string };
+  index: number;
+}) {
+  const [isHovered, setIsHovered] = useState(false);
+  const { Icon, color } = icons[tech.logo];
+
+  return (
+    <motion.li
+      className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80 flex items-center justify-center gap-2 hover:cursor-pointer"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{
+        color: isHovered ? color : "",
+        scale: isHovered ? 1.05 : 1,
+      }}
+      variants={fadeInAnimationVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      custom={index}
+    >
+      <Icon aria-hidden="true" />
+      {tech.title}
+    </motion.li>
+  );
+}
+
 export default function TechStack() {
   const { language } = useLanguage();
   const { ref } = useSectionInView("#tech-stack");
@@ -125,31 +106,9 @@ export default function TechStack() {
         {language === "tr" ? "Teknolojiler" : "Tech Stack"}
       </SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {techStackData.map((tech, index) => {
-          const [isHovered, setIsHovered] = useState(false);
-          return (
-            <motion.li
-              className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80 flex items-center justify-center gap-2 hover:cursor-pointer"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              style={{
-                color: isHovered ? icons[tech.logo].color : "",
-                scale: isHovered ? 1.05 : 1,
-              }}
-              key={index}
-              variants={fadeInAnimationVariants}
-              initial="initial"
-              whileInView="animate"
-              viewport={{
-                once: true,
-              }}
-              custom={index}
-            >
-              {icons[tech.logo].component}
-              {tech.title}
-            </motion.li>
-          );
-        })}
+        {techStackData.map((tech, index) => (
+          <TechStackItem key={tech.title} tech={tech} index={index} />
+        ))}
       </ul>
     </section>
   );

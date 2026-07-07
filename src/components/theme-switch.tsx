@@ -32,7 +32,7 @@ export default function ThemeSwitch() {
               className="hidden  md:flex items-center justify-center w-8 h-8 bg-white  drop-shadow backdrop-blur-[0.5rem] border border-slate-400 dark:border-white border-opacity-40 shadow-2xl rounded-full dark:bg-gray-950"
             >
               <p className="text-sm font-semibold">
-                {theme === "light" ? <Sun /> : <Moon />}
+                {theme === "light" ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}
               </p>
             </motion.button>
           )}
@@ -49,7 +49,7 @@ export default function ThemeSwitch() {
           onClick={toggleTheme}
         >
           <p className="font-semibold">
-            {theme === "light" ? <Moon /> : <Sun />}
+            {theme === "light" ? <Moon aria-hidden="true" /> : <Sun aria-hidden="true" />}
           </p>
         </motion.button>
       </div>
