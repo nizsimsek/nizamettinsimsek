@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "@/lib/types";
 import clsx from "clsx";
 import NextLink from "next/link";
+import { usePathname } from "next/navigation";
 import { useActiveSectionContext } from "@/containers/active-section";
 import Hamburger from "hamburger-react";
 import { useLanguage } from "@/containers/language-context";
@@ -17,6 +18,14 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ links }) => {
 
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+  const pathname = usePathname();
+  const isBlogPage = pathname?.startsWith("/blogs") ?? false;
+
+  const isLinkActive = (link: Link) => {
+    if (link.href === "/blogs") return isBlogPage;
+    if (isBlogPage) return false;
+    return Boolean(link.sectionId && activeSection === link.sectionId);
+  };
 
   const menuTrigger = {
     visible: { scale: 1, opacity: 0.7, y: 0 },
@@ -67,7 +76,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ links }) => {
                     "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300 cursor-pointer",
                     {
                       "text-gray-950 bg-slate-200 dark:text-gray-200 dark:bg-gray-700 rounded":
-                        link.sectionId && activeSection === link.sectionId,
+                        isLinkActive(link),
                       "rounded-t-xl round": index === 0,
                       "rounded-b-xl round": index === links.length - 1,
                     }

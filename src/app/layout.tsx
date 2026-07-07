@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Nizamettin Şimşek",
   },
   description:
-    "Nizamettin Şimşek is Co-founder & Frontend Developer at Let Wash in Palo Alto, building a multi-role SaaS web platform (Root, Owner, Admin, Washer) with React, Vite, and TypeScript.",
+    "Nizamettin Şimşek is Co-founder & Frontend Developer at Let Wash in Palo Alto, building multi-role SaaS with React, Vite, and TypeScript.",
   keywords: [
     "Nizamettin Şimşek",
     "Co-founder",

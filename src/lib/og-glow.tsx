@@ -158,6 +158,23 @@ export function renderGlowOg(photoSrc: string): ReactElement {
               </div>
             ))}
           </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 10,
+              marginTop: 28,
+              padding: "12px 28px",
+              borderRadius: 12,
+              background: "linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%)",
+              color: "white",
+              fontSize: 22,
+              fontWeight: 700,
+              alignSelf: "flex-start",
+            }}
+          >
+            View Portfolio →
+          </div>
         </div>
         <div
           style={{

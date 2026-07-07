@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import NextLink from "next/link";
+import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/containers/active-section";
 import { Link } from "@/lib/types";
@@ -14,6 +15,14 @@ export default function Header({ links }: HeaderProps) {
   const { language } = useLanguage();
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+  const pathname = usePathname();
+  const isBlogPage = pathname?.startsWith("/blogs") ?? false;
+
+  const isLinkActive = (link: Link) => {
+    if (link.href === "/blogs") return isBlogPage;
+    if (isBlogPage) return false;
+    return Boolean(link.sectionId && activeSection === link.sectionId);
+  };
 
   return (
     <header className="hidden md:flex items-center justify-center fixed z-999 w-full mt-4">
@@ -35,8 +44,7 @@ export default function Header({ links }: HeaderProps) {
                 className={clsx(
                   "flex w-full items-center justify-center px-3 py-3 text-gray-600 hover:text-black transition dark:text-gray-400 dark:hover:text-gray-50",
                   {
-                    "text-black dark:text-gray-200":
-                      link.sectionId && activeSection === link.sectionId,
+                    "text-black dark:text-gray-200": isLinkActive(link),
                   }
                 )}
                 href={link.href}
@@ -48,7 +56,7 @@ export default function Header({ links }: HeaderProps) {
                 }}
               >
                 {language === "tr" ? link.titleTr : link.titleEn}
-                {link.sectionId && link.sectionId === activeSection && (
+                {isLinkActive(link) && (
                   <motion.span
                     className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
                     layoutId="activeSection"
