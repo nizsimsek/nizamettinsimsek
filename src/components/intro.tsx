@@ -40,7 +40,7 @@ export default function Intro() {
               src="/work-hero.webp"
               width={288}
               height={288}
-              alt="Nizamettin Şimşek - Co-founder & Frontend Developer"
+              alt="Nizamettin Şimşek - Frontend Developer"
               quality={80}
               priority
               fetchPriority="high"

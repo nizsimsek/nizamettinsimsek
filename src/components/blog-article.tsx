@@ -59,7 +59,7 @@ export default function BlogArticle({ post }: BlogArticleProps) {
 
       <footer className="mt-12 pt-8 border-t border-black/10 dark:border-white/10 text-center">
         <p className="text-sm text-gray-600 dark:text-white/60 mb-4">
-          Nizamettin Şimşek — Co-founder & Frontend Developer
+          Nizamettin Şimşek — Frontend Developer
         </p>
         <div className="flex justify-center gap-4 text-sm">
           <Link href="/blogs" className="hover:underline">

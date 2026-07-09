@@ -344,27 +344,27 @@ As frontend developers, when we optimize not just the UI but also the data flow,
     },
   },
   {
-    slug: "startup-co-founder-frontend-mimarisi-let-wash",
+    slug: "startup-frontend-mimarisi-let-wash",
     publishedAt: "2026-07-01",
-    tags: ["Startup", "Let Wash", "Vite", "React", "TanStack Router", "Co-founder"],
+    tags: ["Startup", "Let Wash", "Vite", "React", "TanStack Router", "Frontend Developer"],
     title: {
-      tr: "Startup'ta Co-founder Olarak Frontend Mimarisi Nasıl Kurulur?",
-      en: "How to Build a Frontend Architecture as a Startup Co-founder",
+      tr: "Startup'ta Frontend Developer Olarak Frontend Mimarisi Nasıl Kurulur?",
+      en: "How to Build a Frontend Architecture as a Startup Frontend Developer",
     },
     description: {
-      tr: "Palo Alto merkezli Let Wash'ta co-founder ve frontend developer olarak çok rollü SaaS panelinin (Root, Owner, Admin, Washer) teknik mimarisini nasıl kurguladığımı paylaşıyorum.",
-      en: "How I designed the technical architecture of a multi-role SaaS panel (Root, Owner, Admin, Washer) as co-founder and frontend developer at Palo Alto-based Let Wash.",
+      tr: "Palo Alto merkezli Let Wash'ta frontend developer olarak çok rollü SaaS panelinin (Root, Carwash Owner, Carwash Admin, Washer) frontend mimarisini nasıl kurduğumu paylaşıyorum.",
+      en: "How I built the frontend architecture of a multi-role SaaS panel (Root, Carwash Owner, Carwash Admin, Washer) as frontend developer at Palo Alto-based Let Wash.",
     },
     readingTime: { tr: "9 dk", en: "9 min" },
     content: {
       tr: `
-Bir startup'ın co-founder'ı olmak, sadece kod yazmaktan çok daha fazlasını gerektirir. Ürün kararları, teknik mimari, kullanıcı deneyimi ve büyüme stratejisi birbirine bağlıdır. Palo Alto merkezli Let Wash'ta co-founder ve frontend developer olarak tam da bu kesişim noktasında çalışıyorum.
+Bir startup'ta frontend developer olarak çalışmak, sadece kod yazmaktan çok daha fazlasını gerektirir. Ürün kararları, teknik mimari, kullanıcı deneyimi ve büyüme stratejisi birbirine bağlıdır. Palo Alto merkezli Let Wash'ta frontend developer olarak tam da bu kesişim noktasında çalışıyorum.
 
-Let Wash'ta web tabanlı SaaS paneli geliştiriyorum: **Root**, **Carwash Owner**, **Carwash Admin** ve **Washer** rolleri için ayrı yetkilendirme, dashboard ve operasyon akışları. Bu yazıda, startup ortamında bu çok rollü SaaS frontend mimarisini nasıl kurduğumuzu paylaşıyorum.
+Let Wash'ın web tabanlı SaaS panelini sıfırdan kurguluyorum: **Root**, **Carwash Owner**, **Carwash Admin** ve **Washer** rolleri için ayrı yetkilendirme, dashboard ve operasyon akışları. Bu yazıda, startup ortamında bu çok rollü SaaS frontend mimarisini nasıl kurduğumu paylaşıyorum.
 
 ## İlk Günler: Hız mı, Kalite mi?
 
-Startup'larda en sık duyulan cevap "hız" olur. Ama hız, teknik borç biriktirerek sağlanırsa 3 ay sonra her feature 3 kat uzun sürer. Let Wash'ta şu dengeyi hedefledik:
+Startup'larda en sık duyulan cevap "hız" olur. Ama hız, teknik borç biriktirerek sağlanırsa 3 ay sonra her feature 3 kat uzun sürer. Let Wash'ta şu dengeyi hedefledim:
 
 - **MVP için hızlı iterasyon:** Temel akışları çalışır hale getir
 - **Mimari için sağlam temel:** Sonradan değiştirmesi pahalı olacak kararları baştan doğru al
@@ -372,7 +372,7 @@ Startup'larda en sık duyulan cevap "hız" olur. Ama hız, teknik borç biriktir
 
 ## Teknoloji Seçimi: Neden Vite + React?
 
-Çok rollü bir SaaS paneli; her rolün farklı ekran, yetki ve veri ihtiyacı olduğu anlamına gelir. Let Wash web frontend'inde şu stack'i kullanıyoruz:
+Çok rollü bir SaaS paneli; her rolün farklı ekran, yetki ve veri ihtiyacı olduğu anlamına gelir. Let Wash web frontend'inde şu stack'i kullanıyorum:
 
 | Katman | Teknoloji | Neden |
 |--------|-----------|-------|
@@ -389,7 +389,7 @@ Startup'larda en sık duyulan cevap "hız" olur. Ama hız, teknik borç biriktir
 | i18n | **i18next** | Çok dilli destek |
 | Monitoring | **Sentry** | Production hata takibi |
 
-Next.js yerine Vite tercih etmemizin sebebi net: Let Wash web tarafı, giriş yapmış kullanıcıların kullandığı role-based bir SaaS uygulaması. SSR/SSG ihtiyacımız marketing sitesine göre daha düşük; bunun yerine hızlı geliştirme döngüsü, type-safe routing ve modüler SPA mimarisi öncelikliydi.
+Next.js yerine Vite tercih etmemin sebebi net: Let Wash web tarafı, giriş yapmış kullanıcıların kullandığı role-based bir SaaS uygulaması. SSR/SSG ihtiyacım marketing sitesine göre daha düşük; bunun yerine hızlı geliştirme döngüsü, type-safe routing ve modüler SPA mimarisi öncelikliydi.
 
 ## TanStack Router ile Role-Based Routing
 
@@ -404,7 +404,7 @@ Route-level code splitting ile her rol kendi bundle'ını yükler. Yetkisiz rout
 
 ## TanStack Query + Zustand: State Ayrımı
 
-ÇokNet'teki deneyimimden öğrendiğim pattern'i Let Wash'ta da uyguladık:
+ÇokNet'teki deneyimimden öğrendiğim pattern'i Let Wash'ta da uyguladım:
 
 - **TanStack Query:** API verileri — işletme listesi, rezervasyonlar, gelir raporları, operasyon kuyrukları
 - **Zustand:** UI state — modal, filtre, sidebar, geçici form durumları
@@ -413,7 +413,7 @@ Bu ayrım, gereksiz re-render'ları azaltır ve veri akışını öngörülebili
 
 ## Stripe Connect Entegrasyonu
 
-İşletmelerin online ödeme alabilmesi için Stripe Connect kullanıyoruz. Frontend tarafında \`@stripe/react-connect-js\` ile onboarding ve payout dashboard'larını embed ettik. Ödeme akışları hassas olduğu için form validasyonunda Zod şemaları ve React Hook Form ile sıkı tip kontrolü uyguladık.
+İşletmelerin online ödeme alabilmesi için Stripe Connect kullanıyorum. Frontend tarafında \`@stripe/react-connect-js\` ile onboarding ve payout dashboard'larını embed ettim. Ödeme akışları hassas olduğu için form validasyonunda Zod şemaları ve React Hook Form ile sıkı tip kontrolü uyguladım.
 
 ## Form ve Validasyon Katmanı
 
@@ -423,11 +423,11 @@ Rezervasyon yönetimi, işletme kaydı ve rol atamaları gibi kritik akışlarda
 - **Zod** ile runtime + compile-time validasyon
 - **@hookform/resolvers** ile ikisini birleştirme
 
-Bu üçlü, startup hızında bile form bug'larını erken yakalamamızı sağlıyor.
+Bu üçlü, startup hızında bile form bug'larını erken yakalamamı sağlıyor.
 
 ## i18n ve Production Monitoring
 
-ABD pazarında çok dilli destek için i18next kullanıyoruz. Production'da Sentry ile frontend hatalarını izliyoruz — startup'ta kullanıcı sayısı az olsa bile, ödeme veya rezervasyon akışındaki bir hata kritik.
+ABD pazarında çok dilli destek için i18next kullanıyorum. Production'da Sentry ile frontend hatalarını izliyorum — startup'ta kullanıcı sayısı az olsa bile, ödeme veya rezervasyon akışındaki bir hata kritik.
 
 Test tarafında Vitest ve Testing Library ile component testleri yazıyoruz. Her PR'da \`tsc -b\` typecheck ve ESLint çalışıyor.
 
@@ -455,11 +455,11 @@ Let Wash web SaaS'ında dört ana rol var. Her birinin ekranları, yetkileri ve 
 - Durum güncellemeleri ve saha operasyon akışları
 - Sadeleştirilmiş, mobil uyumlu arayüz
 
-Tüm roller için ortak bir UI component library (CVA + Tailwind) kullanıyoruz; rol bazlı layout ve navigasyon katmanı üzerine inşa ediliyor.
+Tüm roller için ortak bir UI component library (CVA + Tailwind) kullanıyorum; rol bazlı layout ve navigasyon katmanı üzerine inşa ediliyor.
 
 ## Component Mimarisi
 
-Startup'ta over-engineering yapmak tehlikelidir. Şu yapıyı benimsedik:
+Startup'ta over-engineering yapmak tehlikelidir. Şu yapıyı benimsedim:
 
 \`\`\`
 src/
@@ -474,11 +474,11 @@ Atomic Design'ın tamamını uygulamak yerine, ihtiyaç duydukça extract etmek 
 
 ## TypeScript: Baştan mı, Sonra mı?
 
-Cevap: **baştan.** Startup'ta bile TypeScript kullanmak, refactoring maliyetini düşürür. API response tipleri, form validasyonları ve component prop'ları için tip güvenliği, ekip büyüdükçe daha da değerli hale gelir.
+Cevap: **baştan.** Startup'ta bile TypeScript kullanmak, refactoring maliyetini düşürür. API response tipleri, form validasyonları ve component prop'ları için tip güvenliği, proje büyüdükçe daha da değerli hale gelir.
 
 ## Palo Alto Startup Ekosistemi
 
-Silicon Valley'de bir startup kurmak, Türkiye'deki deneyimimden farklı dinamiklere sahip. Yatırımcı sunumları, product-market fit arayışı ve hızlı pivot kararları günlük gerçeklik. Frontend developer olarak bu süreçte:
+Silicon Valley'de bir startup'ta çalışmak, Türkiye'deki deneyimimden farklı dinamiklere sahip. Hızlı iterasyon, product-market fit arayışı ve pivot kararları günlük gerçeklik. Frontend developer olarak bu süreçte:
 
 - Ürün kararlarına teknik perspektiften katkı sağlamak
 - Prototipleri hızlıca çalışır hale getirmek
@@ -486,7 +486,7 @@ Silicon Valley'de bir startup kurmak, Türkiye'deki deneyimimden farklı dinamik
 
 gibi sorumluluklar üstleniyorum.
 
-## Co-founder Olarak Öğrendiklerim
+## Frontend Developer Olarak Öğrendiklerim
 
 1. **Mükemmel kod, çalışan üründen önce gelmez** — ama çalışan ürün, sürdürülemez kodla da uzun ömürlü olmaz.
 2. **Kullanıcı feedback'i > varsayımlar:** Build et, ölç, öğren.
@@ -495,18 +495,18 @@ gibi sorumluluklar üstleniyorum.
 
 ## Sonuç
 
-Startup'ta co-founder ve frontend developer rolünü birleştirmek, hem teknik hem de ürün becerilerini geliştiren benzersiz bir deneyim. Let Wash'ta Root'tan Washer'a uzanan çok rollü SaaS panelini Vite, TanStack Router, React Query ve Stripe Connect ile geliştirirken, önceki projelerimde (Qulak, ÇokNet, DNSSense) edindiğim deneyimler bu yolculuğa güçlü bir temel sağlıyor.
+Startup'ta frontend developer olarak çalışmak, hem teknik hem de ürün becerilerini geliştiren benzersiz bir deneyim. Let Wash'ta Root'tan Washer'a uzanan çok rollü SaaS panelinin frontend mimarisini Vite, TanStack Router, React Query ve Stripe Connect ile kurarken, önceki projelerimde (Qulak, ÇokNet, DNSSense) edindiğim deneyimler bu yolculuğa güçlü bir temel sağlıyor.
 
-Frontend developer olarak sadece UI implement etmek yerine, ürün kararlarına katkı sağlayan bir co-founder olmak kariyer açısından da farklı bir perspektif kazandırıyor.
+Sadece UI implement etmek yerine, ürün kararlarına teknik perspektiften katkı sağlayan bir frontend developer olmak kariyer açısından da farklı bir perspektif kazandırıyor.
 `,
       en: `
-Being the co-founder of a startup requires much more than just writing code. Product decisions, technical architecture, user experience, and growth strategy are all connected. At Palo Alto-based Let Wash, I work as co-founder and frontend developer at exactly this intersection.
+Being a frontend developer at a startup requires much more than just writing code. Product decisions, technical architecture, user experience, and growth strategy are all connected. At Palo Alto-based Let Wash, I work as frontend developer at exactly this intersection.
 
-At Let Wash I build the web-based SaaS panel: separate authorization, dashboards, and operational flows for the **Root**, **Carwash Owner**, **Carwash Admin**, and **Washer** roles. In this post I share how we set up this multi-role SaaS frontend architecture in a startup environment.
+I architect and build Let Wash's web-based SaaS panel from the ground up: separate authorization, dashboards, and operational flows for the **Root**, **Carwash Owner**, **Carwash Admin**, and **Washer** roles. In this post I share how I set up this multi-role SaaS frontend architecture in a startup environment.
 
 ## Early Days: Speed or Quality?
 
-In startups, the most common answer is "speed." But if speed is achieved by accumulating technical debt, three months later every feature takes three times as long. At Let Wash, we aimed for this balance:
+In startups, the most common answer is "speed." But if speed is achieved by accumulating technical debt, three months later every feature takes three times as long. At Let Wash, I aimed for this balance:
 
 - **Fast iteration for the MVP:** Get the core flows working
 - **A solid foundation for the architecture:** Get decisions that are expensive to change later right from the start
@@ -514,7 +514,7 @@ In startups, the most common answer is "speed." But if speed is achieved by accu
 
 ## Technology Choice: Why Vite + React?
 
-A multi-role SaaS panel means each role has different screens, permissions, and data needs. On the Let Wash web frontend we use the following stack:
+A multi-role SaaS panel means each role has different screens, permissions, and data needs. On the Let Wash web frontend I use the following stack:
 
 | Layer | Technology | Why |
 |-------|------------|-----|
@@ -531,7 +531,7 @@ A multi-role SaaS panel means each role has different screens, permissions, and 
 | i18n | **i18next** | Multi-language support |
 | Monitoring | **Sentry** | Production error tracking |
 
-The reason we chose Vite over Next.js is clear: the Let Wash web side is a role-based SaaS application used by logged-in users. Our SSR/SSG needs are lower than for a marketing site; instead, a fast development loop, type-safe routing, and a modular SPA architecture were the priorities.
+The reason I chose Vite over Next.js is clear: the Let Wash web side is a role-based SaaS application used by logged-in users. My SSR/SSG needs are lower than for a marketing site; instead, a fast development loop, type-safe routing, and a modular SPA architecture were the priorities.
 
 ## Role-Based Routing with TanStack Router
 
@@ -546,7 +546,7 @@ With route-level code splitting, each role loads its own bundle. Unauthorized ro
 
 ## TanStack Query + Zustand: State Separation
 
-We applied the pattern I learned from my experience at ÇokNet to Let Wash as well:
+I applied the pattern I learned from my experience at ÇokNet to Let Wash as well:
 
 - **TanStack Query:** API data — business lists, reservations, revenue reports, operation queues
 - **Zustand:** UI state — modals, filters, sidebar, temporary form states
@@ -555,7 +555,7 @@ This separation reduces unnecessary re-renders and makes the data flow predictab
 
 ## Stripe Connect Integration
 
-We use Stripe Connect so businesses can accept online payments. On the frontend, we embedded onboarding and payout dashboards with \`@stripe/react-connect-js\`. Because payment flows are sensitive, we applied strict type checking in form validation with Zod schemas and React Hook Form.
+I use Stripe Connect so businesses can accept online payments. On the frontend, I embedded onboarding and payout dashboards with \`@stripe/react-connect-js\`. Because payment flows are sensitive, I applied strict type checking in form validation with Zod schemas and React Hook Form.
 
 ## Form and Validation Layer
 
@@ -565,13 +565,13 @@ In critical flows like reservation management, business registration, and role a
 - Runtime + compile-time validation with **Zod**
 - Combining the two with **@hookform/resolvers**
 
-This trio lets us catch form bugs early, even at startup speed.
+This trio lets me catch form bugs early, even at startup speed.
 
 ## i18n and Production Monitoring
 
-We use i18next for multi-language support in the US market. In production, we monitor frontend errors with Sentry — even if the number of users is small at a startup, an error in the payment or reservation flow is critical.
+I use i18next for multi-language support in the US market. In production, I monitor frontend errors with Sentry — even if the number of users is small at a startup, an error in the payment or reservation flow is critical.
 
-On the testing side, we write component tests with Vitest and Testing Library. On every PR, \`tsc -b\` typecheck and ESLint run.
+On the testing side, I write component tests with Vitest and Testing Library. On every PR, \`tsc -b\` typecheck and ESLint run.
 
 ## Multi-Role SaaS Architecture
 
@@ -597,11 +597,11 @@ The Let Wash web SaaS has four main roles. The screens, permissions, and workflo
 - Status updates and field operation flows
 - A simplified, mobile-friendly interface
 
-For all roles we use a shared UI component library (CVA + Tailwind), built on top of a role-based layout and navigation layer.
+For all roles I use a shared UI component library (CVA + Tailwind), built on top of a role-based layout and navigation layer.
 
 ## Component Architecture
 
-Over-engineering at a startup is dangerous. We adopted this structure:
+Over-engineering at a startup is dangerous. I adopted this structure:
 
 \`\`\`
 src/
@@ -616,17 +616,17 @@ Rather than applying all of Atomic Design, extracting as needed is more pragmati
 
 ## TypeScript: From the Start or Later?
 
-The answer: **from the start.** Even at a startup, using TypeScript lowers the cost of refactoring. Type safety for API response types, form validations, and component props becomes even more valuable as the team grows.
+The answer: **from the start.** Even at a startup, using TypeScript lowers the cost of refactoring. Type safety for API response types, form validations, and component props becomes even more valuable as the project grows.
 
 ## The Palo Alto Startup Ecosystem
 
-Founding a startup in Silicon Valley has different dynamics than my experience in Turkey. Investor pitches, the search for product-market fit, and fast pivot decisions are daily reality. As a frontend developer, in this process I take on responsibilities such as:
+Working at a startup in Silicon Valley has different dynamics than my experience in Turkey. Fast iteration, the search for product-market fit, and pivot decisions are daily reality. As a frontend developer, in this process I take on responsibilities such as:
 
 - Contributing to product decisions from a technical perspective
 - Getting prototypes working quickly
 - Iterating quickly on user feedback
 
-## What I Learned as a Co-founder
+## What I Learned as a Frontend Developer
 
 1. **Perfect code does not come before a working product** — but a working product will not last long on unsustainable code either.
 2. **User feedback > assumptions:** Build, measure, learn.
@@ -635,9 +635,9 @@ Founding a startup in Silicon Valley has different dynamics than my experience i
 
 ## Conclusion
 
-Combining the co-founder and frontend developer roles at a startup is a unique experience that develops both technical and product skills. While building the multi-role SaaS panel that spans from Root to Washer at Let Wash with Vite, TanStack Router, React Query, and Stripe Connect, the experience I gained in my previous projects (Qulak, ÇokNet, DNSSense) provides a strong foundation for this journey.
+Working as a frontend developer at a startup is a unique experience that develops both technical and product skills. While building the frontend architecture of the multi-role SaaS panel that spans from Root to Washer at Let Wash with Vite, TanStack Router, React Query, and Stripe Connect, the experience I gained in my previous projects (Qulak, ÇokNet, DNSSense) provides a strong foundation for this journey.
 
-As a frontend developer, being a co-founder who contributes to product decisions rather than just implementing the UI also brings a different perspective career-wise.
+Contributing to product decisions from a technical perspective — rather than just implementing the UI — also brings a different career perspective.
 `,
     },
   },

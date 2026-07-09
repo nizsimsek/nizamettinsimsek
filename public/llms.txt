@@ -1,10 +1,10 @@
 # Nizamettin Şimşek
 
-> Co-founder & Frontend Developer at Let Wash (Palo Alto). Portfolio, projects, and technical blog.
+> Frontend Developer at Let Wash (Palo Alto). Portfolio, projects, and technical blog.
 
 ## About
 
-Nizamettin Şimşek is a Co-founder & Frontend Developer building a multi-role SaaS web platform at Let Wash. He works with React, Vite, TypeScript, TanStack Router, TanStack Query, and Tailwind CSS.
+Nizamettin Şimşek is a Frontend Developer at Let Wash, where he architects and builds the multi-role SaaS web platform. He works with React, Vite, TypeScript, TanStack Router, TanStack Query, and Tailwind CSS.
 
 Previously: DNSSense (frontend), Mayadem / ÇokNet (React Query, GraphQL), KCTEK / Qulak (WebRTC, online exam security).
 
@@ -12,13 +12,13 @@ Previously: DNSSense (frontend), Mayadem / ÇokNet (React Query, GraphQL), KCTEK
 
 - [Home](https://nizamettinsimsek.com.tr/): Portfolio — experience, projects, tech stack, contact
 - [Blog](https://nizamettinsimsek.com.tr/blogs): Technical articles on frontend, WebRTC, React Query, startups
-- [Let Wash blog post](https://nizamettinsimsek.com.tr/blogs/startup-co-founder-frontend-mimarisi-let-wash): Multi-role SaaS architecture (Root, Owner, Admin, Washer)
+- [Let Wash blog post](https://nizamettinsimsek.com.tr/blogs/startup-frontend-mimarisi-let-wash): Multi-role SaaS frontend architecture (Root, Carwash Owner, Carwash Admin, Washer)
 
 ## Blog posts
 
 - [Online Exam Security with WebRTC & WebSocket](https://nizamettinsimsek.com.tr/blogs/online-sinav-guvenligi-webrtc-websocket)
 - [Frontend Data Management with React Query](https://nizamettinsimsek.com.tr/blogs/react-query-ile-frontend-veri-yonetimi)
-- [Startup Co-founder Frontend Architecture at Let Wash](https://nizamettinsimsek.com.tr/blogs/startup-co-founder-frontend-mimarisi-let-wash)
+- [Startup Frontend Architecture at Let Wash](https://nizamettinsimsek.com.tr/blogs/startup-frontend-mimarisi-let-wash)
 - [Real-Time Communication with WebRTC](https://nizamettinsimsek.com.tr/blogs/webrtc-ile-gercek-zamanli-iletisim-platformlari)
 
 ## External profiles

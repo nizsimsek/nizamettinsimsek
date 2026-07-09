@@ -88,7 +88,7 @@ export function renderGlowOg(photoSrc: string): ReactElement {
                 display: "flex",
               }}
             />
-            CO-FOUNDER · FRONTEND DEVELOPER
+            FRONTEND DEVELOPER
           </div>
           <div
             style={{
@@ -127,7 +127,7 @@ export function renderGlowOg(photoSrc: string): ReactElement {
               maxWidth: 560,
             }}
           >
-            Building a multi-role SaaS platform at
+            Architecting the multi-role SaaS platform at
             <span style={{ color: "#93c5fd", fontWeight: 700, marginLeft: 8 }}>
               Let&nbsp;Wash
             </span>

@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { getOgAssets, OG_SIZE } from "@/lib/og-assets";
 import { renderGlowOg } from "@/lib/og-glow";
 
-export const alt = "Nizamettin Şimşek - Co-founder & Frontend Developer";
+export const alt = "Nizamettin Şimşek - Frontend Developer";
 export const size = OG_SIZE;
 export const contentType = "image/png";
 

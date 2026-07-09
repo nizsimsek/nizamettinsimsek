@@ -18,14 +18,13 @@ const siteUrl = "https://nizamettinsimsek.com.tr";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Nizamettin Şimşek | Co-founder & Frontend Developer",
+    default: "Nizamettin Şimşek | Frontend Developer",
     template: "%s | Nizamettin Şimşek",
   },
   description:
-    "Nizamettin Şimşek is Co-founder & Frontend Developer at Let Wash in Palo Alto, building multi-role SaaS with React, Vite, and TypeScript.",
+    "Nizamettin Şimşek is Frontend Developer at Let Wash in Palo Alto, architecting and building multi-role SaaS with React, Vite, and TypeScript.",
   keywords: [
     "Nizamettin Şimşek",
-    "Co-founder",
     "Frontend Developer",
     "Let Wash",
     "Full Stack Developer",
@@ -58,23 +57,23 @@ export const metadata: Metadata = {
     alternateLocale: "en_US",
     url: siteUrl,
     siteName: "Nizamettin Şimşek",
-    title: "Nizamettin Şimşek | Co-founder & Frontend Developer",
+    title: "Nizamettin Şimşek | Frontend Developer",
     description:
-      "Co-founder & Frontend Developer at Let Wash. Building a multi-role SaaS web platform with React, Vite, and TypeScript.",
+      "Frontend Developer at Let Wash. Architecting and building a multi-role SaaS web platform with React, Vite, and TypeScript.",
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Nizamettin Şimşek - Co-founder & Frontend Developer",
+        alt: "Nizamettin Şimşek - Frontend Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nizamettin Şimşek | Co-founder & Frontend Developer",
+    title: "Nizamettin Şimşek | Frontend Developer",
     description:
-      "Co-founder & Frontend Developer at Let Wash. Building a multi-role SaaS web platform with React, Vite, and TypeScript.",
+      "Frontend Developer at Let Wash. Architecting and building a multi-role SaaS web platform with React, Vite, and TypeScript.",
     images: ["/opengraph-image"],
     creator: "@nizsimsek",
   },
@@ -99,7 +98,7 @@ const jsonLd = {
       url: siteUrl,
       name: "Nizamettin Şimşek",
       description:
-        "Portfolio of Nizamettin Şimşek, Co-founder & Frontend Developer at Let Wash.",
+        "Portfolio of Nizamettin Şimşek, Frontend Developer at Let Wash.",
       inLanguage: "tr-TR",
       publisher: { "@id": `${siteUrl}/#person` },
     },
@@ -110,9 +109,9 @@ const jsonLd = {
       alternateName: ["Nizamettin Simsek", "Niz Şimşek", "nizsimsek"],
       url: siteUrl,
       image: `${siteUrl}/work.png`,
-      jobTitle: "Co-founder & Frontend Developer",
+      jobTitle: "Frontend Developer",
       description:
-        "Co-founder & Frontend Developer at Let Wash, building a multi-role SaaS web platform for Root, Carwash Owner, Carwash Admin, and Washer in Palo Alto with React, Vite, and TypeScript.",
+        "Frontend Developer at Let Wash, architecting and building a multi-role SaaS web platform for Root, Carwash Owner, Carwash Admin, and Washer in Palo Alto with React, Vite, and TypeScript.",
       sameAs: [
         "https://www.linkedin.com/in/nizsimsek/",
         "https://www.github.com/nizsimsek/",

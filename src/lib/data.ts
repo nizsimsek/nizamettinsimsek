@@ -55,9 +55,9 @@ export const homeData: Home = {
   titleEn: "Hi, I'm Nizamettin Şimşek",
   titleTr: "Merhaba, Ben Nizamettin Şimşek",
   descriptionEn:
-    "Co-founder & Frontend Developer at Let Wash, building a multi-role SaaS web platform (Root, Owner, Admin, Washer) in Palo Alto with React, Vite, and TypeScript.",
+    "Frontend Developer at Let Wash, architecting and building a multi-role SaaS web platform (Root, Carwash Owner, Carwash Admin, Washer) in Palo Alto with React, Vite, and TypeScript.",
   descriptionTr:
-    "Palo Alto merkezli Let Wash'ta Co-founder & Frontend Developer olarak Root, Owner, Admin ve Washer rolleri için çok rollü SaaS web platformunu geliştiriyorum. React, Vite, TanStack Router ve TypeScript ile ölçeklenebilir panel deneyimleri oluşturuyorum.",
+    "Palo Alto merkezli Let Wash'ta Frontend Developer olarak Root, Carwash Owner, Carwash Admin ve Washer rolleri için çok rollü SaaS web platformunun frontend mimarisini kuruyor ve geliştiriyorum. React, Vite, TanStack Router ve TypeScript ile ölçeklenebilir panel deneyimleri oluşturuyorum.",
 };
 
 export const aboutData: About = {
@@ -251,17 +251,17 @@ export const techStackData: TechStack[] = [
 export const experiencesData: ExperienceInfo[] = [
   {
     isOdd: true,
-    titleEn: "Co-founder & Frontend Developer",
-    titleTr: "Co-founder & Frontend Developer",
+    titleEn: "Frontend Developer",
+    titleTr: "Frontend Developer",
     company: "Let Wash",
     companyUrl: "https://www.letwash.com/",
     companyLogo: "/letwash.png",
     durationEn: "Jul 2026 - Present",
     durationTr: "Temmuz 2026 - Devam Ediyor",
     descriptionEn:
-      "As Co-founder & Frontend Developer at Let Wash in Palo Alto, I build the multi-role SaaS web platform for Root, Carwash Owner, Carwash Admin, and Washer. I lead frontend development for role-based dashboards, operations flows, and Stripe Connect integrations with a focus on performance, usability, and scalable architecture.",
+      "As Frontend Developer at Let Wash in Palo Alto, I architect and build the multi-role SaaS web platform for Root, Carwash Owner, Carwash Admin, and Washer — from role-based routing and dashboards to operations flows and Stripe Connect integrations, with a focus on performance, usability, and scalable architecture.",
     descriptionTr:
-      "Palo Alto merkezli Let Wash'ta Co-founder & Frontend Developer olarak Root, Carwash Owner, Carwash Admin ve Washer rolleri için çok rollü SaaS web platformunu geliştiriyorum. Rol bazlı paneller, operasyon akışları ve Stripe Connect entegrasyonlarının frontend geliştirmesini; performans, kullanılabilirlik ve ölçeklenebilir mimari odağıyla yürütüyorum.",
+      "Palo Alto merkezli Let Wash'ta Frontend Developer olarak Root, Carwash Owner, Carwash Admin ve Washer rolleri için çok rollü SaaS web platformunun frontend mimarisini kuruyor ve geliştiriyorum. Rol bazlı paneller, operasyon akışları ve Stripe Connect entegrasyonlarını performans, kullanılabilirlik ve ölçeklenebilir mimari odağıyla hayata geçiriyorum.",
     techs: [
       "React",
       "Vite",
