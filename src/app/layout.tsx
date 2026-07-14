@@ -115,7 +115,6 @@ const jsonLd = {
       sameAs: [
         "https://www.linkedin.com/in/nizsimsek/",
         "https://www.github.com/nizsimsek/",
-        "https://nizsimsek.dev",
         "https://www.letwash.com/",
       ],
       worksFor: [
