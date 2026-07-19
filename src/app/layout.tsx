@@ -103,6 +103,15 @@ const jsonLd = {
       publisher: { "@id": `${siteUrl}/#person` },
     },
     {
+      "@type": "ProfilePage",
+      "@id": `${siteUrl}/#profilepage`,
+      url: siteUrl,
+      name: "Nizamettin Şimşek | Frontend Developer",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      mainEntity: { "@id": `${siteUrl}/#person` },
+      inLanguage: "tr-TR",
+    },
+    {
       "@type": "Person",
       "@id": `${siteUrl}/#person`,
       name: "Nizamettin Şimşek",
@@ -115,8 +124,10 @@ const jsonLd = {
       sameAs: [
         "https://www.linkedin.com/in/nizsimsek/",
         "https://www.github.com/nizsimsek/",
+        "https://x.com/ilahinizo",
         "https://www.letwash.com/",
       ],
+      mainEntityOfPage: { "@id": `${siteUrl}/#profilepage` },
       worksFor: [
         {
           "@type": "Organization",
