@@ -19,6 +19,12 @@ const nextConfig = {
         destination: "https://nizamettinsimsek.com.tr/:path*",
         permanent: true,
       },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.nizamettinsimsek.com.tr" }],
+        destination: "https://nizamettinsimsek.com.tr/:path*",
+        permanent: true,
+      },
     ];
   },
   images: {
