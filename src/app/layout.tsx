@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     description:
       "Frontend Developer at Let Wash. Architecting and building a multi-role SaaS web platform with React, Vite, and TypeScript.",
     images: ["/opengraph-image"],
-    creator: "@nizsimsek",
+    creator: "@ilahinizo",
   },
   icons: {
     icon: [

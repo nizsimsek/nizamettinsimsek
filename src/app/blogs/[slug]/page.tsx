@@ -37,11 +37,20 @@ export async function generateMetadata({
       publishedTime: post.publishedAt,
       authors: ["Nizamettin Şimşek"],
       tags: post.tags,
+      images: [
+        {
+          url: "/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: post.title.tr,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title.tr,
       description: post.description.tr,
+      images: ["/opengraph-image"],
     },
   };
 }
@@ -58,13 +67,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     headline: post.title.tr,
     description: post.description.tr,
     datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    image: `${siteUrl}/opengraph-image`,
     author: {
       "@type": "Person",
+      "@id": `${siteUrl}/#person`,
       name: "Nizamettin Şimşek",
       url: siteUrl,
     },
     publisher: {
       "@type": "Person",
+      "@id": `${siteUrl}/#person`,
       name: "Nizamettin Şimşek",
       url: siteUrl,
     },
